@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fg_profile">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow android:paddingTop="20dp"
+            android:background="#8BC34A"
+            >
+            <TextView
+                android:id="@+id/eaten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="EugeneX"
+                android:textSize="30dp"
+                android:drawableLeft="@drawable/add"
+                ></TextView>
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="572dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#BDBDBD"
+                android:gravity="center"
+                android:text="streaks"
+                android:textSize="30dp"></TextView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#BDBDBD"
+                android:textSize="30dp"
+                android:text="6 day       61 day"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#BDBDBD"
+                android:textSize="15dp"
+                android:text="current streak              longest streak"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                ></TextView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/adding"
+                android:drawableRight="@drawable/adding"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="favorites"
+                android:textSize="25dp"></Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/adding"
+                android:drawableRight="@drawable/adding"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="body measurements"
+                android:textSize="23dp"></Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/adding"
+                android:drawableRight="@drawable/adding"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="statistics"
+                android:textSize="25dp"></Button>
+        </TableLayout>
+
+    </TableLayout>
+
+</FrameLayout>

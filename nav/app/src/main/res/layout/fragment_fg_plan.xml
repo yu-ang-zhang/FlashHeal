@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fg_plan">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0">
+
+        <TableRow android:paddingTop="20dp"
+            android:background="#8BC34A"
+            >
+            <TextView
+                android:id="@+id/eaten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="find your plan"
+                android:textSize="30dp"
+                android:paddingBottom="20dp"
+                ></TextView>
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="572dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MEAL PLANS"
+                android:textSize="30dp"></TextView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="15dp"
+                android:text="Pre-planned recipes and meal planning"
+                android:paddingBottom="10dp"
+                ></TextView>
+            <TableRow
+                android:layout_marginBottom="20dp"
+                >
+                <Button
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:text="Keto Maintain"
+                    android:layout_marginRight="20dp"
+                    android:textSize="25dp"></Button>
+
+                <Button
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:text="Eat like Denice"
+                    android:textSize="25dp"></Button>
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BALANCED DIETS"
+                android:textSize="30dp"></TextView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="15dp"
+                android:text="Simple recipes with food rankings &amp; tracking"
+                android:paddingBottom="10dp"
+                ></TextView>
+
+            <TableRow>
+                <Button
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:text="Food for strength"
+                    android:layout_marginRight="20dp"
+                    android:textSize="25dp"></Button>
+            </TableRow>
+
+        </TableLayout>
+
+    </TableLayout>
+
+</FrameLayout>
