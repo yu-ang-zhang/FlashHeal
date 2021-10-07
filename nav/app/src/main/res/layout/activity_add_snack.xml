@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_snack"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow android:paddingTop="20dp"
+            android:background="#8BC34A"
+            >
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/adding"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="RECORD SNACK"
+                android:textSize="30dp"
+                android:paddingBottom="20dp"
+                ></TextView>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/adding"
+                ></ImageButton>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME:"
+            android:textSize="30dp"
+            android:paddingTop="10dp"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/snack_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="make a name for recording"
+            android:textSize="30dp"></EditText>
+
+        <TableRow
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FOOD:"
+                android:textSize="18dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WEIGHT:(g)"
+                android:textSize="18dp"></TextView>
+        </TableRow>
+    </TableLayout>
+
+    <GridLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:columnCount="3"
+        android:rowCount="10"
+        android:background="#999999">
+
+        <EditText
+            android:id="@+id/food1"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:background="#888888"
+            android:hint="what you eat"
+            android:inputType="text"></EditText>
+
+        <EditText
+            android:id="@+id/weight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:inputType="number"></EditText>
+        <EditText
+            android:id="@+id/food2"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:background="#888888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="what you eat"></EditText>
+        <EditText
+            android:id="@+id/weight2"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></EditText>
+        <EditText
+            android:id="@+id/food3"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:background="#888888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="what you eat"></EditText>
+        <EditText
+            android:id="@+id/weight3"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></EditText>
+        <EditText
+            android:id="@+id/food4"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:background="#888888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="what you eat"></EditText>
+        <EditText
+            android:id="@+id/weight4"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></EditText>
+        <EditText
+            android:id="@+id/food5"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:background="#888888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="what you eat"></EditText>
+        <EditText
+            android:id="@+id/weight5"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></EditText>
+        <EditText
+            android:id="@+id/food6"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:background="#888888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="what you eat"></EditText>
+        <EditText
+            android:id="@+id/weight6"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></EditText>
+        <EditText
+            android:id="@+id/food7"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:background="#888888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="what you eat"></EditText>
+        <EditText
+            android:id="@+id/weight7"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></EditText>
+    </GridLayout>
+    <Button
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="favorite"
+        android:textSize="30dp"></Button>
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ADD"
+        android:textSize="30dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"></Button>
+</LinearLayout>

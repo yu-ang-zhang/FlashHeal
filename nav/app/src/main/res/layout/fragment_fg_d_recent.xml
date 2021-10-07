@@ -6,11 +6,36 @@
     tools:context=".fg_d_recent">
 
     <Button
+        android:id="@+id/recent1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:text="d_recent"
         android:drawableRight="@drawable/adding"
         android:layout_marginTop="200dp"></Button>
+    <Button
+        android:id="@+id/recent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:drawableRight="@drawable/adding"
+        android:text="d_recent"
+        android:textSize="30dp"></Button>
+    <Button
+        android:id="@+id/recent3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:drawableRight="@drawable/adding"
+        android:text="d_recent"
+        android:textSize="30dp"></Button>
+    <Button
+        android:id="@+id/recent4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:drawableRight="@drawable/adding"
+        android:text="d_recent"
+        android:textSize="30dp"></Button>
 
 </FrameLayout>

@@ -1,12 +1,19 @@
 package com.example.nav;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.Objects;
+import java.util.logging.Logger;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +21,12 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class fg_diary extends Fragment {
+
+    private Button breakfast;
+    private Button lunch;
+    private Button dinner;
+    private Button snack;
+    Intent intent_next;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -47,18 +60,57 @@ public class fg_diary extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        TextView kaluli = (TextView)getActivity().findViewById(R.id.kaluli);
+        kaluli.setText(String.valueOf(UserJoinInfo.getKaluli()).substring(0,7));
+
+        TextView eaten = (TextView)getActivity().findViewById(R.id.eaten);
+        eaten.setText(String.valueOf(recordedmeal.getMealkaluli()));
+
+        TextView left = (TextView)getActivity().findViewById(R.id.kalulileft);
+        left.setText(String.valueOf(UserJoinInfo.getKaluli() - recordedmeal.getMealkaluli()).substring(0,7));
+
+        breakfast = (Button) getActivity().findViewById(R.id.add_b);
+        breakfast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent_next = new Intent(getActivity(), add_breakfast.class);
+                startActivity(intent_next);
+            }
+        });
+
+        lunch = (Button) getActivity().findViewById(R.id.add_l);
+        lunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent_next = new Intent(getActivity(), add_lunch.class);
+                startActivity(intent_next);
+            }
+        });
+
+        dinner = (Button) getActivity().findViewById(R.id.add_d);
+        dinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent_next = new Intent(getActivity(), add_dinner.class);
+                startActivity(intent_next);
+            }
+        });
+
+        snack = (Button) getActivity().findViewById(R.id.add_s);
+        snack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent_next = new Intent(getActivity(), add_snack.class);
+                startActivity(intent_next);
+            }
+        });
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fg_diary, container, false);
     }
 }

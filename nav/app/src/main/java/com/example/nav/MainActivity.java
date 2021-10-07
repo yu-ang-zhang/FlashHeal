@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             case R.id.diary:
                 fg1 = new fg_diary();
                 fTransaction.add(R.id.ly_content,fg1);
+//                fg1.setText()
                 break;
             case R.id.profile:
                 fg2 = new fg_profile();

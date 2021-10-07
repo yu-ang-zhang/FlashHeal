@@ -10,6 +10,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nav">
         <activity
+            android:name=".add_snack"
+            android:exported="true" />
+        <activity
+            android:name=".add_dinner"
+            android:exported="true" />
+        <activity
+            android:name=".add_lunch"
+            android:exported="true" />
+        <activity
+            android:name=".add_breakfast"
+            android:exported="true" />
+        <activity
+            android:name=".moreBioInfo"
+            android:exported="true" />
+        <activity
+            android:name=".login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gender"
+            android:exported="true" />
+        <activity
+            android:name=".confirm"
+            android:exported="true" />
+        <activity
             android:name=".snack"
             android:exported="true" />
         <activity
@@ -20,19 +50,17 @@
             android:exported="true" />
         <activity
             android:name=".breakfast"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 
