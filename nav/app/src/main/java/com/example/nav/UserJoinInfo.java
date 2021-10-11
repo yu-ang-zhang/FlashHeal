@@ -1,13 +1,13 @@
 package com.example.nav;
 
 public class UserJoinInfo {
-    //临时存储用户注册信息
     private static String UserPassword;
     private static boolean UserGender;
     private static Integer UserAge;
     private static Integer UserWeight;
     private static Integer UserHeight;
     private static double kaluli;
+    private static Integer goalweight;
 
 
     public static void setUserPassword(String userPassword){
@@ -76,6 +76,14 @@ public class UserJoinInfo {
                 UserJoinInfo.kaluli = (10.4 * userWeight + 600)  * 4.184;
             }
         }
+    }
+
+    public static Integer getGoalweight() {
+        return goalweight;
+    }
+
+    public static void setGoalweight(Integer goalweight) {
+        UserJoinInfo.goalweight = goalweight;
     }
 }
 

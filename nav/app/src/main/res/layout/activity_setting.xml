@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".moreBioInfo">
+    tools:context=".setting">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="setting"
+        android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/heightp" />
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -37,26 +37,14 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/ageinput"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="AGE"
-                android:inputType="number|numberDecimal"
-                tools:layout_editor_absoluteX="161dp"
-                tools:layout_editor_absoluteY="514dp" />
-
-            <TextView
-                android:id="@+id/agetextView"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="y"
-                android:textSize="40dp" />
+                android:hint="new age"
+                android:textSize="30dp" />
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,27 +53,13 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/currentweightinput"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="CURRENT WEIGHT"
-                android:inputType="number|numberDecimal"
-                tools:layout_editor_absoluteX="161dp"
-                tools:layout_editor_absoluteY="514dp" />
-
-            <TextView
-                android:id="@+id/textView155"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="kg"
-                android:textSize="40dp" />
+                android:hint="new height(cm)"
+                android:textSize="30dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="90dp"
@@ -93,27 +67,13 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/goalweightinput"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="GOAL WEIGHT"
-                android:inputType="number|numberDecimal"
-                tools:layout_editor_absoluteX="161dp"
-                tools:layout_editor_absoluteY="514dp" />
-
-            <TextView
-                android:id="@+id/textView15"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="kg"
-                android:textSize="40dp" />
+                android:hint="new current weight(kg)"
+                android:textSize="20dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="90dp"
@@ -121,26 +81,12 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/heightinput"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="HEIGHT"
-                android:inputType="number|numberDecimal"
-                tools:layout_editor_absoluteX="161dp"
-                tools:layout_editor_absoluteY="514dp" />
-
-            <TextView
-                android:id="@+id/textView24"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="cm"
-                android:textSize="40dp" />
-
+                android:hint="new goal weight(kg)"
+                android:textSize="20dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -151,6 +97,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:orientation="horizontal"
+        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -159,7 +106,7 @@
         app:layout_constraintVertical_bias="0.807">
 
         <Button
-            android:id="@+id/LastStep3"
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -176,12 +123,12 @@
             android:layout_weight="1.0"/>
 
         <Button
-            android:id="@+id/NextStep3"
+            android:id="@+id/confirm_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_register"
-            android:text="NEXT"
+            android:text="CONFIRM"
             android:textColor="#A9A9A9"
             android:textSize="18dp"
             tools:layout_editor_absoluteX="256dp"

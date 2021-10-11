@@ -17,7 +17,9 @@
         <entry key="..\:/3801/nav/app/src/main/res/layout/activity_lunch.xml" value="0.23369565217391305" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/activity_main.xml" value="0.2368659420289855" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/activity_more_bio_info.xml" value="0.21920289855072464" />
+        <entry key="..\:/3801/nav/app/src/main/res/layout/activity_setting.xml" value="0.25364583333333335" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/activity_snack.xml" value="0.23369565217391305" />
+        <entry key="..\:/3801/nav/app/src/main/res/layout/activity_statistic.xml" value="0.25364583333333335" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_add.xml" value="0.264" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_b_favorites.xml" value="0.2368659420289855" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_b_recent.xml" value="0.2368659420289855" />
@@ -26,7 +28,7 @@
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_diary.xml" value="0.2368659420289855" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_l_favorites.xml" value="0.23369565217391305" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_l_recent.xml" value="0.23369565217391305" />
-        <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_plan.xml" value="0.2368659420289855" />
+        <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_plan.xml" value="0.264" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_profile.xml" value="0.2368659420289855" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_recipe.xml" value="0.2368659420289855" />
         <entry key="..\:/3801/nav/app/src/main/res/layout/fragment_fg_s_favorites.xml" value="0.23369565217391305" />

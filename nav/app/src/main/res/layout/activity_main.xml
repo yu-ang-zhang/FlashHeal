@@ -23,14 +23,9 @@
             android:text="profile" />
 
         <RadioButton
-            android:id="@+id/add"
+            android:id="@+id/retriever"
             style="@style/tab_menu_item"
-            android:text="+" />
-
-        <RadioButton
-            android:id="@+id/plan"
-            style="@style/tab_menu_item"
-            android:text="plan" />
+            android:text="retriever" />
 
         <RadioButton
             android:id="@+id/recipe"

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nav">
         <activity
+            android:name=".statistic"
+            android:exported="true" />
+        <activity
+            android:name=".setting"
+            android:exported="true" />
+        <activity
             android:name=".add_snack"
             android:exported="true" />
         <activity
