@@ -12,9 +12,11 @@ public class moreBioInfo extends AppCompatActivity {
 
     EditText agei;
     EditText heighti;
-    EditText weighti;
+    EditText cweighti;
+    EditText gweighti;
     String height;
-    String weight;
+    String cweight;
+    String gweight;
     String age;
     Button next;
     Intent intent_next;
@@ -29,20 +31,23 @@ public class moreBioInfo extends AppCompatActivity {
 
         agei = findViewById(R.id.ageinput);
         heighti = findViewById(R.id.heightinput);
-        weighti = findViewById(R.id.weightinput);
+        cweighti = findViewById(R.id.currentweightinput);
+        gweighti = findViewById(R.id.goalweightinput);
         next = findViewById(R.id.NextStep3);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 height=heighti.getText().toString();
-                weight=weighti.getText().toString();
+                cweight=cweighti.getText().toString();
+                gweight=gweighti.getText().toString();
                 age = agei.getText().toString();
                 //将身高体重存入临时存储区
                 UserJoinInfo.setUserHeight(Integer.parseInt(height));
-                UserJoinInfo.setUserWeight(Integer.parseInt(weight));
+                UserJoinInfo.setUserWeight(Integer.parseInt(cweight));
+                UserJoinInfo.setGoalweight(Integer.parseInt(gweight));
                 UserJoinInfo.setUserAge(Integer.parseInt(age));
-                UserJoinInfo.setKaluli(UserJoinInfo.getUserGender(),Integer.parseInt(age),Integer.parseInt(weight));
+                UserJoinInfo.setKaluli(UserJoinInfo.getUserGender(),Integer.parseInt(age),Integer.parseInt(cweight));
                 moreBioInfo.this.finish();
                 startActivity(intent_next);
             }

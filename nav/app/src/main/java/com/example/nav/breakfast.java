@@ -18,6 +18,8 @@ public class breakfast extends AppCompatActivity implements RadioGroup.OnChecked
     private RadioGroup rg_tab_bar;
     private RadioButton rb_channel;
     private ImageButton back;
+    private Button add;
+    private Intent intent;
 
     //Fragment Object
 
@@ -40,6 +42,16 @@ public class breakfast extends AppCompatActivity implements RadioGroup.OnChecked
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        add = findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(breakfast.this,add_breakfast.class);
+                breakfast.this.finish();
+                startActivity(intent);
             }
         });
     }

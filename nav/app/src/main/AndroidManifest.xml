@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nav">
         <activity
+            android:name=".recipeshow"
+            android:exported="true" />
+        <activity
             android:name=".statistic"
             android:exported="true" />
         <activity

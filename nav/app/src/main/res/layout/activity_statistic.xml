@@ -18,40 +18,75 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weight &amp; BMI"
+        android:text="WEIGHT"
         android:textSize="30dp"></TextView>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="starting"
+    android:textSize="10dp"></TextView>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="goal"
+        android:layout_gravity="right"
+    android:textSize="10dp"></TextView>
 
     <ProgressBar
+        android:id="@+id/weight"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:max="100"
-        android:progress="10"></ProgressBar>
+        ></ProgressBar>
 
-    <ProgressBar
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:max="100"
-        android:progress="10"></ProgressBar>
+        android:text="HAVE LOST"
+        android:textSize="30dp"></TextView>
+    <TextView
+        android:id="@+id/havelost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STILL REMAINING"
+        android:textSize="30dp"></TextView>
+    <TextView
+        android:id="@+id/still"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"></TextView>
+
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:stretchColumns="0">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE WEIGHT"
+            android:textSize="30dp"
+            ></TextView>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/newc"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:hint="update current weight"></EditText>
 
         <Button
+            android:id="@+id/up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -63,11 +98,13 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/newg"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:hint="set new goal weight"></EditText>
 
             <Button
+                android:id="@+id/set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -77,6 +114,7 @@
     </TableLayout>
 
 <Button
+    android:id="@+id/back"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"

@@ -47,11 +47,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 fg2 = new fg_profile();
                 fTransaction.add(R.id.ly_content,fg2);
                 break;
-            case R.id.add:
-                fg3 = new fg_add();
-                fTransaction.add(R.id.ly_content,fg3);
-                break;
-            case R.id.plan:
+                case R.id.retriever:
                 fg4 = new fg_plan();
                 fTransaction.add(R.id.ly_content,fg4);
                 break;
@@ -67,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private void hideAllFragment(FragmentTransaction fragmentTransaction){
         if(fg1 != null)fragmentTransaction.hide(fg1);
         if(fg2 != null)fragmentTransaction.hide(fg2);
-        if(fg3 != null)fragmentTransaction.hide(fg3);
         if(fg4 != null)fragmentTransaction.hide(fg4);
         if(fg5 != null)fragmentTransaction.hide(fg5);
     }

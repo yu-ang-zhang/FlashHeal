@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -15,7 +17,8 @@ public class dinner extends AppCompatActivity implements RadioGroup.OnCheckedCha
     private RadioGroup rg_tab_bar;
     private RadioButton rb_channel;
     private ImageButton back;
-
+    private Button add;
+    private Intent intent;
     //Fragment Object
 
     private Fragment fg1,fg2;
@@ -35,6 +38,16 @@ public class dinner extends AppCompatActivity implements RadioGroup.OnCheckedCha
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        add = findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(dinner.this,add_dinner.class);
+                dinner.this.finish();
+                startActivity(intent);
             }
         });
     }

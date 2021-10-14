@@ -16,6 +16,7 @@
         android:src="@drawable/add">
     </ImageView>
     <Button
+        android:id="@+id/st"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -25,6 +26,7 @@
         android:textSize="30dp"></Button>
 
     <Button
+        android:id="@+id/se"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -32,6 +34,12 @@
         android:drawableRight="@drawable/adding"
         android:text="setting"
         android:textSize="30dp"></Button>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="back"></Button>
 </LinearLayout>
 
 

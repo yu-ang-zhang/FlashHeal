@@ -1,12 +1,15 @@
 package com.example.nav;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +17,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class fg_profile extends Fragment {
+
+    private Button b;
+    private Button sta;
+    private Button set;
+    private Intent intent;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,6 +52,37 @@ public class fg_profile extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        sta = getActivity().findViewById(R.id.st);
+        sta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(getActivity(),statistic.class);
+                startActivity(intent);
+            }
+        });
+
+        set = getActivity().findViewById(R.id.se);
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(getActivity(),setting.class);
+                startActivity(intent);
+            }
+        });
+
+        b = getActivity().findViewById(R.id.back);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(getActivity(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

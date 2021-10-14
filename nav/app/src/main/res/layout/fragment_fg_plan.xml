@@ -23,6 +23,7 @@
             ></TextView>
 
         <EditText
+            android:id="@+id/namei"
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,11 +31,13 @@
             android:hint="search food nutrition (100g)">
         </EditText>
         <Button
+            android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="search"></Button>
 
         <TextView
+            android:id="@+id/foodname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="food name"
@@ -63,38 +66,54 @@
         </TableRow>
             <TableRow>
                 <TextView
+                    android:id="@+id/p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="protein(g)"></TextView>
                 <TextView
+                    android:id="@+id/f"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="fat(g)"></TextView>
                 <TextView
+                    android:id="@+id/c"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="carb(g)"></TextView>
                 <TextView
+                    android:id="@+id/cal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="energy(kj)"></TextView>
             </TableRow>
         </TableLayout>
         <Button
+            android:id="@+id/rs1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="recent search"></Button>
         <Button
-        android:layout_width="wrap_content"
+            android:id="@+id/rs2"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="recent search"></Button>
         <Button
-        android:layout_width="wrap_content"
+            android:id="@+id/rs3"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="recent search"></Button>
         <Button
-        android:layout_width="wrap_content"
+            android:id="@+id/rs4"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="recent search"></Button>
+
+        <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="back"></Button>
     </LinearLayout>
+
+
 </FrameLayout>

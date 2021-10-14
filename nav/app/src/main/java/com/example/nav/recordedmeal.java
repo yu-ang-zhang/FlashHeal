@@ -10,6 +10,7 @@ public class recordedmeal {
     private static ArrayList<recorded_lunch> lunchs;
     private static ArrayList<recorded_dinner> dinners;
     private static ArrayList<recorded_snack> snacks;
+    private static ArrayList<searchedfood> searchedfoods;
 
     public static void addBreakfast(recorded_breakfast breakfast){
         breakfasts.add(breakfast);
@@ -26,6 +27,8 @@ public class recordedmeal {
     public static void addSnack(recorded_snack snack){
         snacks.add(snack);
     }
+
+    public static void addFood(searchedfood food) {searchedfoods.add(food);}
 
     public static double setkaluli(double kaluli){return mealkaluli+=kaluli;}
 

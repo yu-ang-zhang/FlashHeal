@@ -63,19 +63,19 @@ public class fg_diary extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         TextView kaluli = (TextView)getActivity().findViewById(R.id.kaluli);
-        kaluli.setText(String.valueOf(UserJoinInfo.getKaluli()).substring(0,7));
+        kaluli.setText(String.valueOf(UserJoinInfo.getKaluli()).substring(0,4));
 
         TextView eaten = (TextView)getActivity().findViewById(R.id.eaten);
-        eaten.setText(String.valueOf(recordedmeal.getMealkaluli()));
+        eaten.setText(String.valueOf(recordedmeal.getMealkaluli()).substring(0,3));
 
         TextView left = (TextView)getActivity().findViewById(R.id.kalulileft);
-        left.setText(String.valueOf(UserJoinInfo.getKaluli() - recordedmeal.getMealkaluli()).substring(0,7));
+        left.setText(String.valueOf(UserJoinInfo.getKaluli() - recordedmeal.getMealkaluli()).substring(0,4));
 
         breakfast = (Button) getActivity().findViewById(R.id.add_b);
         breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent_next = new Intent(getActivity(), add_breakfast.class);
+                intent_next = new Intent(getActivity(), breakfast.class);
                 startActivity(intent_next);
             }
         });
@@ -84,7 +84,7 @@ public class fg_diary extends Fragment {
         lunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent_next = new Intent(getActivity(), add_lunch.class);
+                intent_next = new Intent(getActivity(), lunch.class);
                 startActivity(intent_next);
             }
         });
@@ -93,7 +93,7 @@ public class fg_diary extends Fragment {
         dinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent_next = new Intent(getActivity(), add_dinner.class);
+                intent_next = new Intent(getActivity(), dinner.class);
                 startActivity(intent_next);
             }
         });
@@ -102,7 +102,7 @@ public class fg_diary extends Fragment {
         snack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent_next = new Intent(getActivity(), add_snack.class);
+                intent_next = new Intent(getActivity(), snack.class);
                 startActivity(intent_next);
             }
         });
