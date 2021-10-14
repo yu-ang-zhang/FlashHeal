@@ -41,15 +41,6 @@ public class dinner extends AppCompatActivity implements RadioGroup.OnCheckedCha
             }
         });
 
-        add = findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(dinner.this,add_dinner.class);
-                dinner.this.finish();
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

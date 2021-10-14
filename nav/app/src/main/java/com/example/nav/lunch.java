@@ -40,15 +40,6 @@ public class lunch extends AppCompatActivity implements RadioGroup.OnCheckedChan
                 finish();
             }
         });
-        add = findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(lunch.this,add_lunch.class);
-                lunch.this.finish();
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

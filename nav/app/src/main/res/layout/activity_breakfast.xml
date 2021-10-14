@@ -66,16 +66,6 @@
         android:layout_above="@id/rg_tab_bar"
         />
 
-    <Button
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="450dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:text="add"
-        android:textSize="25dp"></Button>
 
     <FrameLayout
         android:id="@+id/ly_content"
@@ -83,4 +73,5 @@
         android:layout_height="match_parent"
         android:layout_above="@id/div_tab_bar"
         ></FrameLayout>
+
 </LinearLayout>

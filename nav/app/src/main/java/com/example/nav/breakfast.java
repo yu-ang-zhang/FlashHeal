@@ -45,15 +45,15 @@ public class breakfast extends AppCompatActivity implements RadioGroup.OnChecked
             }
         });
 
-        add = findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(breakfast.this,add_breakfast.class);
-                breakfast.this.finish();
-                startActivity(intent);
-            }
-        });
+//        add = findViewById(R.id.add);
+//        add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                intent = new Intent(breakfast.this,add_breakfast.class);
+//                breakfast.this.finish();
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override

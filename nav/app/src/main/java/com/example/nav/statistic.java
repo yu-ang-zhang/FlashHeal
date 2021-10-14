@@ -17,7 +17,6 @@ public class statistic extends AppCompatActivity {
     private Button set;
     private ProgressBar weight;
     private EditText current;
-    private EditText goal;
     private TextView have;
     private TextView still;
     private Intent intent;
@@ -28,9 +27,7 @@ public class statistic extends AppCompatActivity {
         setContentView(R.layout.activity_statistic);
 
         current = findViewById(R.id.newc);
-        goal = findViewById(R.id.newg);
         weight = findViewById(R.id.weight);
-
         weight.setMax(UserJoinInfo.getUserWeight() - UserJoinInfo.getGoalweight());
         have = findViewById(R.id.havelost);
         still = findViewById(R.id.still);

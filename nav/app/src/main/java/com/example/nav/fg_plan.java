@@ -96,7 +96,7 @@ public class fg_plan extends Fragment {
                     }
                 }
                 rs1 = (Button) getActivity().findViewById(R.id.rs1);
-                rs1.setText("66666666");
+                rs1.setText(nameinput.getText().toString());
             }
         });
 

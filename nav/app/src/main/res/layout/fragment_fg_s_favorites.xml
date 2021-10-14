@@ -12,5 +12,13 @@
         android:text="s_favorites"
         android:drawableRight="@drawable/adding"
         android:layout_marginTop="200dp"></Button>
-
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="add"
+        android:textSize="25dp"></Button>
 </FrameLayout>

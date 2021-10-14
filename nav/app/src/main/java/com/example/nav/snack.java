@@ -40,15 +40,6 @@ public class snack extends AppCompatActivity implements RadioGroup.OnCheckedChan
                 finish();
             }
         });
-        add = findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(snack.this,add_snack.class);
-                snack.this.finish();
-                startActivity(intent);
-            }
-        });
     }
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
