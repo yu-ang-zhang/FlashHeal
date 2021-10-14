@@ -20,7 +20,9 @@
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/adding"></ImageButton>
+                android:backgroundTint="#8BC34A"
+                android:src="@drawable/ic_action_back"
+                tools:src="@drawable/ic_action_back"></ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,20 +37,21 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/adding"
-                ></ImageButton>
+                android:backgroundTint="#8BC34A"
+                android:src="@android:drawable/ic_menu_add"
+                tools:src="@android:drawable/ic_menu_add"></ImageButton>
         </TableRow>
     </TableLayout>
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NAME:"
-            android:textSize="30dp"
             android:paddingTop="10dp"
-            ></TextView>
+            android:text="NAME:"
+            android:textSize="30dp"></TextView>
 
         <EditText
             android:id="@+id/lunch_name"

@@ -20,17 +20,19 @@
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/adding"></ImageButton>
+                android:backgroundTint="#8BC34A"
+                android:src="@drawable/adding"
+                android:tint="@color/black"
+                tools:src="@drawable/ic_action_back"></ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:text="RECORD BREAKFAST"
-                android:textSize="30dp"
+                android:gravity="center"
                 android:paddingBottom="20dp"
-                ></TextView>
+                android:text="RECORD BREAKFAST"
+                android:textSize="30dp"></TextView>
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -203,13 +205,15 @@
         android:layout_gravity="center"
         android:text="favorite"
         android:textSize="30dp"></Button>
+
     <Button
         android:id="@+id/add"
-        android:layout_width="wrap_content"
+        android:layout_width="191dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="ADD"
-        android:textSize="30dp"
         android:paddingLeft="50dp"
-        android:paddingRight="50dp"></Button>
+        android:paddingRight="50dp"
+        android:text="ADD"
+        android:textSize="30dp"></Button>
+
 </LinearLayout>

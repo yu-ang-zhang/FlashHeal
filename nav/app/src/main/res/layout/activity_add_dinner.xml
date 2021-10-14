@@ -20,7 +20,9 @@
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/adding"></ImageButton>
+                android:backgroundTint="#8BC34A"
+                android:src="@drawable/adding"
+                tools:src="@drawable/ic_action_back"></ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
