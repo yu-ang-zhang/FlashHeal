@@ -56,24 +56,24 @@ public class UserJoinInfo {
     public static void setKaluli(boolean userGender, Integer userAge, Integer userWeight) {
         if (userGender == true) {
             if (userAge <= 30){
-                UserJoinInfo.kaluli = (15.2 * userWeight + 680) *1000 ;
+                UserJoinInfo.kaluli = (15.2 * userWeight + 680)  ;
             }
             else if (userAge <= 60){
-                UserJoinInfo.kaluli = (11.5 * userWeight + 830)  *1000;
+                UserJoinInfo.kaluli = (11.5 * userWeight + 830)  ;
             }
             else {
-                UserJoinInfo.kaluli = (13.4 * userWeight + 490)  *1000;
+                UserJoinInfo.kaluli = (13.4 * userWeight + 490)  ;
             }
         }
         else {
             if (userAge <= 30){
-                UserJoinInfo.kaluli = (14.6 * userWeight + 450)  *1000;
+                UserJoinInfo.kaluli = (14.6 * userWeight + 450)  ;
             }
             else if (userAge <= 60){
-                UserJoinInfo.kaluli = (8.6 * userWeight + 830)  *1000;
+                UserJoinInfo.kaluli = (8.6 * userWeight + 830)  ;
             }
             else {
-                UserJoinInfo.kaluli = (10.4 * userWeight + 600) *1000;
+                UserJoinInfo.kaluli = (10.4 * userWeight + 600) ;
             }
         }
     }
