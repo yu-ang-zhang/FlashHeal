@@ -33,8 +33,10 @@ public class fg_plan extends Fragment {
     private TextView calo;
     private EditText nameinput;
     private Intent intent;
+    private searchedfood sfood;
     databasehandler db;
 
+    int i = 0;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -93,10 +95,63 @@ public class fg_plan extends Fragment {
                         fat.setText(String.valueOf(food.getfat()));
                         carb.setText(String.valueOf(food.getcarb()));
                         calo.setText(String.valueOf(food.getcalorie()));
+                        sfood = new searchedfood(nameinput.getText().toString(),food.getproteins(),food.getfat(),food.getcarb(),(int)food.getcalorie());
+                        recordedmeal.addFood(sfood);
+                        switch (i%3) {
+                            case 0:
+                                rs1 = (Button) getActivity().findViewById(R.id.rs1);
+                                rs1.setText(nameinput.getText().toString());
+                                rs1.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        sfood = recordedmeal.getSearchedfoods().get(0);
+                                        name.setText(sfood.getName());
+                                        pro.setText(String.valueOf(sfood.getProt()).substring(0,3));
+                                        fat.setText(String.valueOf(sfood.getFat()).substring(0,3));
+                                        carb.setText(String.valueOf(sfood.getCarb()).substring(0,3));
+                                        calo.setText(String.valueOf(sfood.getCal()).substring(0,3));
+                                    }
+                                });
+                                break;
+                            case 1:
+                                if(recordedmeal.getSearchedfoods().size()>1){
+                                    rs2 = (Button) getActivity().findViewById(R.id.rs2);
+                                    rs2.setText(nameinput.getText().toString());
+                                    rs2.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            sfood = recordedmeal.getSearchedfoods().get(1);
+                                            name.setText(sfood.getName());
+                                            pro.setText(String.valueOf(sfood.getProt()).substring(0,3));
+                                            fat.setText(String.valueOf(sfood.getFat()).substring(0,3));
+                                            carb.setText(String.valueOf(sfood.getCarb()).substring(0,3));
+                                            calo.setText(String.valueOf(sfood.getCal()).substring(0,3));
+                                        }
+                                    });
+                                }
+                                break;
+                            case 2:
+                                if(recordedmeal.getSearchedfoods().size()>2) {
+                                    rs3 = (Button) getActivity().findViewById(R.id.rs3);
+                                    rs3.setText(nameinput.getText().toString());
+                                    rs3.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            sfood = recordedmeal.getSearchedfoods().get(2);
+                                            name.setText(sfood.getName());
+                                            pro.setText(String.valueOf(sfood.getProt()).substring(0,3));
+                                            fat.setText(String.valueOf(sfood.getFat()).substring(0,3));
+                                            carb.setText(String.valueOf(sfood.getCarb()).substring(0,3));
+                                            calo.setText(String.valueOf(sfood.getCal()).substring(0,3));
+                                        }
+                                    });
+                                }
+                                break;
+                        }
+                        i++;
                     }
                 }
-                rs1 = (Button) getActivity().findViewById(R.id.rs1);
-                rs1.setText(nameinput.getText().toString());
+
             }
         });
 

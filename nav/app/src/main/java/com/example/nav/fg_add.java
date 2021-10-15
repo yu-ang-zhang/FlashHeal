@@ -77,16 +77,6 @@ public class fg_add extends Fragment {
 
         super.onActivityCreated(savedInstanceState);
 
-        //        add = findViewById(R.id.add);
-//        add.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                intent = new Intent(breakfast.this,add_breakfast.class);
-//                breakfast.this.finish();
-//                startActivity(intent);
-//            }
-//        });
-
         breakfast = (Button) getActivity().findViewById(R.id.breakfast);
         breakfast.setOnClickListener(new View.OnClickListener() {
             @Override

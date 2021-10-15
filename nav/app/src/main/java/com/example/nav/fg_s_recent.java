@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,7 +20,9 @@ import android.widget.Button;
  */
 public class fg_s_recent extends Fragment {
     private Button add;
-
+    private TextView name;
+    private TextView fw;
+    private TextView cl;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,8 +64,25 @@ public class fg_s_recent extends Fragment {
     }
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-
         super.onActivityCreated(savedInstanceState);
+
+        name = getActivity().findViewById(R.id.name);
+        fw = getActivity().findViewById(R.id.fandw);
+        cl = getActivity().findViewById(R.id.calories);
+
+        String string = "";
+
+        if(recordedmeal.getLunchs().size()!=0){
+            name.setText(recordedmeal.getSnacks().get(recordedmeal.getSnacks().size()-1).getName());
+            for (Map.Entry e:recordedmeal.getSnacks().get(recordedmeal.getSnacks().size()-1).getS_foods().entrySet()
+            ) {
+                string += e.getKey() + "  " + String.valueOf(e.getValue()) + "g\n";
+            }
+            fw.setText(string);
+            cl.setText(String.valueOf(recordedmeal.getSnacks().get(recordedmeal.getSnacks().size()-1).getS_kaluli()));
+        }
+
+
         add = getActivity().findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener() {
             @Override

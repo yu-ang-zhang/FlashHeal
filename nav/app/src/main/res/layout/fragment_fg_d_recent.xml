@@ -5,14 +5,48 @@
     android:layout_height="match_parent"
     tools:context=".fg_d_recent">
 
-    <Button
-        android:id="@+id/recent1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="d_recent"
-        android:drawableRight="@drawable/adding"
-        android:layout_marginTop="200dp"></Button>
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="meal name"
+            ></TextView>
+        <TextView
+            android:id="@+id/name"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            ></TextView>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="foods and weights"
+            ></TextView>
+        <TextView
+            android:id="@+id/fandw"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"        ></TextView>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="calories"
+            ></TextView>
+        <TextView
+            android:id="@+id/calories"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"        ></TextView>
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/add"
         android:layout_width="wrap_content"

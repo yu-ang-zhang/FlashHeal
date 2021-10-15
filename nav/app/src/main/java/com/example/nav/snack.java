@@ -12,14 +12,21 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
-public class snack extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
-    private RadioGroup rg_tab_bar;
-    private RadioButton rb_channel;
+import java.util.Map;
+
+public class snack extends AppCompatActivity
+{
     private ImageButton back;
-    private Button add;
+    private ImageButton add;
     private Intent intent;
-    //Fragment Object
+    private TextView rname;
+    private TextView rfw;
+    private TextView rcl;
+    private TextView name;
+    private TextView fw;
+    private TextView cl;
 
     private Fragment fg1,fg2;
     private FragmentManager fManager;
@@ -28,11 +35,38 @@ public class snack extends AppCompatActivity implements RadioGroup.OnCheckedChan
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_snack);
         fManager = getSupportFragmentManager();
-        rg_tab_bar = (RadioGroup) findViewById(R.id.rg_tab_bar);
-        rg_tab_bar.setOnCheckedChangeListener(this);
-        //获取第一个单选按钮，并设置其为选中状态
-        rb_channel = (RadioButton) findViewById(R.id.b_recent);
-        rb_channel.setChecked(true);
+        rname = findViewById(R.id.rname);
+        rfw = findViewById(R.id.rfandw);
+        rcl = findViewById(R.id.rcalories);
+
+        String string = "";
+
+        if(recordedmeal.getSnacks().size()!=0){
+            rname.setText(recordedmeal.getSnacks().get(recordedmeal.getSnacks().size()-1).getName());
+            for (Map.Entry e:recordedmeal.getSnacks().get(recordedmeal.getSnacks().size()-1).getS_foods().entrySet()
+            ) {
+                string += e.getKey() + "  " + String.valueOf(e.getValue()) + "g\n";
+            }
+            rfw.setText(string);
+            rcl.setText(String.valueOf(recordedmeal.getSnacks().get(recordedmeal.getSnacks().size()-1).getS_kaluli()).substring(0,3));
+        }
+
+        name = findViewById(R.id.name);
+        fw = findViewById(R.id.fandw);
+        cl = findViewById(R.id.calories);
+
+        String fstring = "";
+
+        if(favorite_sn.isFa()){
+            name.setText(favorite_sn.getName());
+            for (Map.Entry e:favorite_sn.getS_foods().entrySet()
+            ) {
+                fstring += e.getKey() + "  " + String.valueOf(e.getValue()) + "g\n";
+            }
+            fw.setText(fstring);
+            cl.setText(String.valueOf(favorite_sn.getS_kaluli()).substring(0,3));
+        }
+
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,28 +74,15 @@ public class snack extends AppCompatActivity implements RadioGroup.OnCheckedChan
                 finish();
             }
         });
-    }
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        FragmentTransaction fTransaction = fManager.beginTransaction();
-        hideAllFragment(fTransaction);
 
-        switch (checkedId){
-            case R.id.b_recent:
-                fg1 = new fg_s_recent();
-                fTransaction.add(R.id.ly_content,fg1);
-                break;
-            case R.id.b_favorites:
-                fg2 = new fg_s_favorites();
-                fTransaction.add(R.id.ly_content,fg2);
-                break;
-        }
-        fTransaction.commit();
-    }
-
-    //隐藏所有Fragment
-    private void hideAllFragment(FragmentTransaction fragmentTransaction){
-        if(fg1 != null)fragmentTransaction.hide(fg1);
-        if(fg2 != null)fragmentTransaction.hide(fg2);
+        add = findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(snack.this, add_snack.class);
+                snack.this.finish();
+                startActivity(intent);
+            }
+        });
     }
 }

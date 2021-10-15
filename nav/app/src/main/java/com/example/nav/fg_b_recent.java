@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +21,9 @@ import android.widget.Button;
 public class fg_b_recent extends Fragment {
 
     private Button add;
+    private TextView name;
+    private TextView fw;
+    private TextView cl;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,16 +67,23 @@ public class fg_b_recent extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-
         super.onActivityCreated(savedInstanceState);
-        add = getActivity().findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), add_breakfast.class);
-                startActivity(intent);
+
+        name = getActivity().findViewById(R.id.name);
+        fw = getActivity().findViewById(R.id.fandw);
+        cl = getActivity().findViewById(R.id.calories);
+
+        String string = "";
+
+        if(recordedmeal.getBreakfasts().size()!=0){
+            name.setText(recordedmeal.getBreakfasts().get(recordedmeal.getBreakfasts().size()-1).getName());
+            for (Map.Entry e:recordedmeal.getBreakfasts().get(recordedmeal.getBreakfasts().size()-1).getB_foods().entrySet()
+            ) {
+                string += e.getKey() + "  " + String.valueOf(e.getValue()) + "g\n";
             }
-        });
+            fw.setText(string);
+            cl.setText(String.valueOf(recordedmeal.getBreakfasts().get(recordedmeal.getBreakfasts().size()-1).getB_kaluli()));
+        }
     }
 
     @Override

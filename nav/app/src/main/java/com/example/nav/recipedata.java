@@ -17,14 +17,11 @@ public class recipedata extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
-    // Database Name
     private static final String DATABASE_NAME = "recipemanager";
 
-    // Food table name
     private static final String TABLE_RECIPE = "Recipe";
     private static databasehandler dbhelper;
 
-    // Food Table Columns names
     private static final String KEY_ID= "id";
     private static final String RECIPE_NAME = "Recipe_name";
     private static final String FOOD_ITEM = "Food_item";
@@ -32,8 +29,7 @@ public class recipedata extends SQLiteOpenHelper {
     private static final String  CALORIES = "calories";
 
     public static synchronized databasehandler getInstance(Context context) {
-        // Use the application context, which will ensure that you
-        // don't accidentally leak an Activity's context.
+
 
         if (dbhelper == null) {
             dbhelper = new databasehandler(context.getApplicationContext());
@@ -43,7 +39,6 @@ public class recipedata extends SQLiteOpenHelper {
 
     public recipedata(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-//        SQLiteDatabase db=this.getWritableDatabase();
     }
 
 
@@ -298,33 +293,26 @@ public class recipedata extends SQLiteOpenHelper {
     }
 
     public void addrecipe(recipe_items_model recipe_items_model, SQLiteDatabase db ) {
-//        db=getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(RECIPE_NAME, recipe_items_model.getRecipe_name());
         values.put(FOOD_ITEM, recipe_items_model.getfood_item());
         values.put(Cooking_Recipe, recipe_items_model.getCookingrecipe());
         values.put(CALORIES, recipe_items_model.getcalorie());
-
         db.insert(TABLE_RECIPE, null, values);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_RECIPE);
-
-        // Create tables again
         onCreate(sqLiteDatabase);
     }
 
     public List<recipe_items_model> getAllrecipes() {
         List<recipe_items_model> recipe_list = new ArrayList<>();
-        // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_RECIPE;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
                 recipe_items_model recipe_item = new recipe_items_model();
@@ -332,12 +320,9 @@ public class recipedata extends SQLiteOpenHelper {
                 recipe_item.setfood_item(cursor.getString(cursor.getColumnIndex(FOOD_ITEM)));
                 recipe_item.setCookingrecipe(cursor.getString(cursor.getColumnIndex(Cooking_Recipe)));
                 recipe_item.setcalorie((int) Float.parseFloat(cursor.getString(cursor.getColumnIndex(CALORIES))));
-                // Adding contact to list
                 recipe_list.add(recipe_item);
             } while (cursor.moveToNext());
         }
-
-        // return contact list
         return recipe_list;
     }
 }

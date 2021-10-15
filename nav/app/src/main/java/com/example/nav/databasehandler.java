@@ -17,18 +17,14 @@ import java.util.List;
 
 public class databasehandler extends SQLiteOpenHelper {
 
-    // All Static variables
-    // Database Version
+
     private static final int DATABASE_VERSION = 1;
 
-    // Database Name
     private static final String DATABASE_NAME = "Foodmanager";
 
-    // Food table name
     private static final String TABLE_FOOD = "Food";
     private static databasehandler dbhelper;
 
-    // Food Table Columns names
     private static final String KEY_ID= "id";
     private static final String FOOD_CATEGORY = "Food_category";
     private static final String FOOD_ITEM = "Food_item";
@@ -38,8 +34,7 @@ public class databasehandler extends SQLiteOpenHelper {
     private static final String  CALORIES = "calories";
 
     public static synchronized databasehandler getInstance(Context context) {
-        // Use the application context, which will ensure that you
-        // don't accidentally leak an Activity's context.
+
 
         if (dbhelper == null) {
             dbhelper = new databasehandler(context.getApplicationContext());
@@ -50,7 +45,6 @@ public class databasehandler extends SQLiteOpenHelper {
 
     public databasehandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-//        SQLiteDatabase db=this.getWritableDatabase();
     }
 
     // Creating Tables

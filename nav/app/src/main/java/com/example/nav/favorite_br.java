@@ -2,22 +2,21 @@ package com.example.nav;
 
 import java.util.HashMap;
 
-public class recorded_breakfast {
-
-
+public class favorite_br {
 
     private static String name;
-    private static HashMap<String,Integer> b_foods;
+    public static HashMap<String,Integer> b_foods;
     private static double b_kaluli;
-    private static boolean favorite = false;
+    private static boolean fa = false;
 
-    public recorded_breakfast(String b_name) {
-        name = b_name;
-        b_foods = new HashMap<>();
+    public static void setFa() {
+        favorite_br.fa = true;
     }
-    public static void setName(String name) {
-        recorded_breakfast.name = name;
+
+    public static boolean isFa() {
+        return fa;
     }
+
     public static void add(String foodname, Integer weight){
         b_foods.put(foodname,weight);
     }
@@ -25,8 +24,6 @@ public class recorded_breakfast {
     public static void setB_kaluli(double k) {
         b_kaluli = k;
     }
-
-    public static void setFavorite() {favorite = true;}
 
     public static String getName() {
         return name;
@@ -40,7 +37,7 @@ public class recorded_breakfast {
         return b_kaluli;
     }
 
-    public static boolean isFavorite() {
-        return favorite;
+    public static void setName(String name) {
+        favorite_br.name = name;
     }
 }

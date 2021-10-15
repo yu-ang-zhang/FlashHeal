@@ -2,16 +2,18 @@ package com.example.nav;
 
 import java.util.HashMap;
 
-public class recorded_snack {
-
+public class favorite_sn {
     private static String name;
-    private static HashMap<String,Integer> s_foods;
+    public static HashMap<String,Integer> s_foods;
     private static double s_kaluli;
-    private static boolean favorite = false;
+    private static boolean fa = false;
 
-    public recorded_snack(String b_name) {
-        name = b_name;
-        s_foods = new HashMap<>();
+    public static void setFa() {
+        favorite_sn.fa = true;
+    }
+
+    public static boolean isFa() {
+        return fa;
     }
 
     public static void add(String foodname, Integer weight){
@@ -21,8 +23,6 @@ public class recorded_snack {
     public static void setS_kaluli(double k) {
         s_kaluli = k;
     }
-
-    public static void setFavorites() {favorite = true;}
 
     public static String getName() {
         return name;
@@ -36,11 +36,7 @@ public class recorded_snack {
         return s_kaluli;
     }
 
-    public static boolean isFavorite() {
-        return favorite;
-    }
-
     public static void setName(String name) {
-        recorded_snack.name = name;
+        favorite_sn.name = name;
     }
 }
