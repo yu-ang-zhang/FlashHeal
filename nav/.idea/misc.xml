@@ -46,12 +46,21 @@
         <entry key="..\:/3801/zixue/nav/app/src/main/res/layout/style.xml" value="0.2390625" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable-v24/button_register.xml" value="0.22239583333333332" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/button_register.xml" value="0.22239583333333332" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/diary_background.xml" value="0.209375" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_baseline_book_24.xml" value="0.209375" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_baseline_menu_diary_24.xml" value="0.2171875" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_diary.xml" value="0.2171875" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_diary_checked.xml" value="0.21979166666666666" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22239583333333332" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_plam_checked.xml" value="0.21979166666666666" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_plan.xml" value="0.2171875" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_profile.xml" value="0.2171875" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/ic_recipe.xml" value="0.2171875" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/plan_background.xml" value="0.21979166666666666" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/profile_background.xml" value="0.21979166666666666" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/radiobutton_background.xml" value="0.209375" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/recipe_background.xml" value="0.21979166666666666" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/select.xml" value="0.209375" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout-finger/activity_main_text.xml" value="0.20104166666666667" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_add_breakfast.xml" value="0.25" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_add_dinner.xml" value="0.20625" />
@@ -67,7 +76,7 @@
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_main2.xml" value="0.33" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_maintest.xml" value="0.20104166666666667" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_more_bio_info.xml" value="0.20260416666666667" />
-        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_recipeshow.xml" value="0.20260416666666667" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_recipeshow.xml" value="0.33" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_setting.xml" value="0.20260416666666667" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_snack.xml" value="0.20260416666666667" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_statistic.xml" value="0.20260416666666667" />

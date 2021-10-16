@@ -16,7 +16,8 @@
         <RadioButton
             android:id="@+id/diary"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/ic_diary"
+            android:checked="false"
+            android:drawableTop="@drawable/diary_background"
             android:orientation="vertical"
             android:text="Diary"
             android:textSize="12sp" />
@@ -24,21 +25,21 @@
         <RadioButton
             android:id="@+id/recipe"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/ic_recipe"
+            android:drawableTop="@drawable/recipe_background"
             android:text="Recipe"
             android:textSize="12sp"/>
 
         <RadioButton
             android:id="@+id/retriever"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/ic_plan"
+            android:drawableTop="@drawable/plan_background"
             android:text="Retriever"
             android:textSize="12sp"/>
 
         <RadioButton
             android:id="@+id/profile"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/ic_profile"
+            android:drawableTop="@drawable/profile_background"
             android:text="Profile"
             android:textSize="12sp"
             />
