@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".MainActivity">
 
     <RadioGroup
@@ -9,28 +10,42 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        android:background="#535353"
+        android:background="#fff"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/diary"
             style="@style/tab_menu_item"
-            android:text="diary" />
-
-        <RadioButton
-            android:id="@+id/profile"
-            style="@style/tab_menu_item"
-            android:text="profile" />
-
-        <RadioButton
-            android:id="@+id/retriever"
-            style="@style/tab_menu_item"
-            android:text="retriever" />
+            android:drawableTop="@drawable/ic_diary"
+            android:orientation="vertical"
+            android:text="Diary"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/recipe"
             style="@style/tab_menu_item"
-            android:text="recipe" />
+            android:drawableTop="@drawable/ic_recipe"
+            android:text="Recipe"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/retriever"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/ic_plan"
+            android:text="Retriever"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/profile"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/ic_profile"
+            android:text="Profile"
+            android:textSize="12sp"
+            />
+
+
+
+
 
     </RadioGroup>
 
@@ -45,7 +60,6 @@
         android:id="@+id/ly_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/div_tab_bar"
-        ></FrameLayout>
+        android:layout_above="@id/div_tab_bar"></FrameLayout>
 
 </RelativeLayout>
