@@ -29,31 +29,16 @@ public class searchedfood {
         return prot;
     }
 
-    public void setProt(double prot) {
-        this.prot = prot;
-    }
-
     public double getCarb() {
         return carb;
-    }
-
-    public void setCarb(double carb) {
-        this.carb = carb;
     }
 
     public double getFat() {
         return fat;
     }
 
-    public void setFat(double fat) {
-        this.fat = fat;
-    }
-
     public int getCal() {
         return cal;
     }
 
-    public void setCal(int cal) {
-        this.cal = cal;
-    }
 }

@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private RadioGroup rg_tab_bar;
     private RadioButton rb_channel;
 
-    //Fragment Object
 
     private Fragment fg1,fg2,fg3,fg4,fg5;
     private FragmentManager fManager;
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         fManager = getSupportFragmentManager();
         rg_tab_bar = (RadioGroup) findViewById(R.id.rg_tab_bar);
         rg_tab_bar.setOnCheckedChangeListener(this);
-        //获取第一个单选按钮，并设置其为选中状态
         rb_channel = (RadioButton) findViewById(R.id.diary);
         rb_channel.setChecked(true);
     }
@@ -59,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         fTransaction.commit();
     }
 
-    //隐藏所有Fragment
     private void hideAllFragment(FragmentTransaction fragmentTransaction){
         if(fg1 != null)fragmentTransaction.hide(fg1);
         if(fg2 != null)fragmentTransaction.hide(fg2);

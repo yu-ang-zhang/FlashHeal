@@ -42,7 +42,6 @@ public class moreBioInfo extends AppCompatActivity {
                 cweight=cweighti.getText().toString();
                 gweight=gweighti.getText().toString();
                 age = agei.getText().toString();
-                //将身高体重存入临时存储区
                 UserJoinInfo.setUserHeight(Integer.parseInt(height));
                 UserJoinInfo.setUserWeight(Integer.parseInt(cweight));
                 UserJoinInfo.setGoalweight(Integer.parseInt(gweight));

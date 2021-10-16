@@ -13,8 +13,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class add_breakfast extends AppCompatActivity {
 
@@ -37,6 +39,7 @@ public class add_breakfast extends AppCompatActivity {
     Button add;
     Button favorite;
     recorded_breakfast b;
+    boolean f =  false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +60,8 @@ public class add_breakfast extends AppCompatActivity {
         weight5 = findViewById(R.id.weight5);
         weight6 = findViewById(R.id.weight6);
         name = findViewById(R.id.breakfast_name);
-        b = new recorded_breakfast(name.getText().toString());
         db = new databasehandler(getApplicationContext());
+        b = new recorded_breakfast(name.getText().toString());
         kaluli = 0;
         add = findViewById(R.id.add);
         favorite = findViewById(R.id.favorite);
@@ -66,42 +69,64 @@ public class add_breakfast extends AppCompatActivity {
         favorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                b.setFavorite();
+                Toast.makeText(add_breakfast.this,"now this meal is your favorite one",Toast.LENGTH_SHORT).show();
+                favorite_br.setName(name.getText().toString());
+                f = true;
+                favorite_br.setFa();
+                favorite_br.b_foods = new HashMap<>();
             }
         });
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 for (food_items_model food: db.getAllfooditems()
                 ) {
                     if(food.getfood_item().equals(food1.getText().toString() + " (100 g.)")){
                         kaluli += food.getcalorie() * Integer.parseInt(weight1.getText().toString())/100;
-                        b.add(food1.getText().toString(),food.getcalorie() * Integer.parseInt(weight1.getText().toString())/100);
+                        b.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+                        if(f) favorite_br.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+
                     }
                     if(food.getfood_item().equals(food2.getText().toString() + " (100 g.)")){
                         kaluli += food.getcalorie() * Integer.parseInt(weight2.getText().toString())/100;
-                        b.add(food2.getText().toString(),food.getcalorie() * Integer.parseInt(weight2.getText().toString())/100);
+                        b.add(food2.getText().toString(),Integer.parseInt(weight2.getText().toString()));
+                        if(f) favorite_br.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+
                     }
                     if(food.getfood_item().equals(food3.getText().toString() + " (100 g.)")){
                         kaluli += food.getcalorie() * Integer.parseInt(weight3.getText().toString())/100;
-                        b.add(food3.getText().toString(),food.getcalorie() * Integer.parseInt(weight3.getText().toString())/100);
+                        b.add(food3.getText().toString(),Integer.parseInt(weight3.getText().toString()));
+                        if(f) favorite_br.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+
                     }
                     if(food.getfood_item().equals(food4.getText().toString() + " (100 g.)")){
                         kaluli += food.getcalorie() * Integer.parseInt(weight4.getText().toString())/100;
-                        b.add(food4.getText().toString(),food.getcalorie() * Integer.parseInt(weight4.getText().toString())/100);
+                        b.add(food4.getText().toString(),Integer.parseInt(weight4.getText().toString()));
+                        if(f) favorite_br.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+
                     }
                     if(food.getfood_item().equals(food5.getText().toString() + " (100 g.)")){
                         kaluli += food.getcalorie() * Integer.parseInt(weight5.getText().toString())/100;
-                        b.add(food5.getText().toString(),food.getcalorie() * Integer.parseInt(weight5.getText().toString())/100);
+                        b.add(food5.getText().toString(),Integer.parseInt(weight5.getText().toString()));
+                        if(f) favorite_br.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+
                     }
                     if(food.getfood_item().equals(food6.getText().toString() + " (100 g.)")){
                         kaluli += food.getcalorie() * Integer.parseInt(weight6.getText().toString())/100;
-                        b.add(food6.getText().toString(),food.getcalorie() * Integer.parseInt(weight6.getText().toString())/100);
+                        b.add(food6.getText().toString(),Integer.parseInt(weight6.getText().toString()));
+                        if(f) favorite_br.add(food1.getText().toString(),Integer.parseInt(weight1.getText().toString()));
+
                     }
                 }
                 b.setB_kaluli(kaluli);
+                if (f) {
+                    favorite_br.setB_kaluli(kaluli);
+                }
+                b.setName(name.getText().toString());
                 recordedmeal.setkaluli(kaluli);
+                recordedmeal.addBreakfast(b);
                 add_breakfast.this.finish();
                 startActivity(intent);
             }

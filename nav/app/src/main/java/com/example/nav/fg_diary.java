@@ -63,13 +63,16 @@ public class fg_diary extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         TextView kaluli = (TextView)getActivity().findViewById(R.id.kaluli);
-        kaluli.setText(String.valueOf(UserJoinInfo.getKaluli()).substring(0,4));
+//        kaluli.setText(String.valueOf(UserJoinInfo.getKaluli()).substring(0,3));
+        kaluli.setText(String.valueOf((int) UserJoinInfo.getKaluli()));
 
         TextView eaten = (TextView)getActivity().findViewById(R.id.eaten);
-        eaten.setText(String.valueOf(recordedmeal.getMealkaluli()).substring(0,3));
+//        eaten.setText(String.valueOf(recordedmeal.getMealkaluli()).substring(0,3));
+        eaten.setText(String.valueOf((int) recordedmeal.getMealkaluli()));
 
         TextView left = (TextView)getActivity().findViewById(R.id.kalulileft);
-        left.setText(String.valueOf(UserJoinInfo.getKaluli() - recordedmeal.getMealkaluli()).substring(0,4));
+//        left.setText(String.valueOf(UserJoinInfo.getKaluli() - recordedmeal.getMealkaluli()).substring(0,3));
+        left.setText(String.valueOf((int) UserJoinInfo.getKaluli() - (int) recordedmeal.getMealkaluli()));
 
         breakfast = (Button) getActivity().findViewById(R.id.add_b);
         breakfast.setOnClickListener(new View.OnClickListener() {
