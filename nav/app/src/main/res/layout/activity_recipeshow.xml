@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     android:orientation="vertical"
     tools:context=".recipeshow">
 
@@ -10,50 +12,120 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#186124"
         android:layout_gravity="center"
+        android:background="@color/lightGreen"
         android:gravity="center"
-        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         ></TextView>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Ingredients"
-        ></TextView>
-    <TextView
-        android:id="@+id/ingredients"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        ></TextView>
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="directions"
-        ></TextView>
-    <TextView
-        android:id="@+id/directions"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"        ></TextView>
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="calories"
-        ></TextView>
-    <TextView
-        android:id="@+id/calories"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"        ></TextView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="578dp"
+        android:layout_below="@+id/name"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:typeface="normal"></TextView>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list1"
+                android:layout_gravity="center"
+                android:background="@drawable/background"
+                ></TextView>
+
+            <TextView
+                android:text="Directions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:id="@+id/directions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background"
+                ></TextView>
+
+            <TextView
+                android:text="Calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:id="@+id/calories"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_below="@+id/list3"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background"
+                android:layout_marginBottom="20dp"></TextView>
+
+            <Space
+                android:id="@+id/spacer2"
+                android:layout_below="@id/directions"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
 
     <Button
         android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/buttongreen"
         android:text="back" />
-</LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

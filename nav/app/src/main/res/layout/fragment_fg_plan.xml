@@ -8,106 +8,195 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#EBEBEB"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/eaten"
-            android:background="#8BC34A"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="nutrition retriever"
-            android:textSize="30dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            ></TextView>
 
-        <EditText
-            android:id="@+id/namei"
-            android:paddingTop="10dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:hint="search food nutrition (100g)">
-        </EditText>
-        <Button
-            android:id="@+id/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="search"></Button>
+            android:layout_height="150dp"
+            android:background="#77CE92"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/foodname"
+            <TextView
+                android:id="@+id/eaten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                android:paddingBottom="10dp"
+                android:text="Nutrition Retriever"
+                android:textColor="@color/white"
+                android:textSize="30dp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/namei"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/duihuakuang"
+                    android:hint="Search here for 100g"
+                    android:paddingLeft="60dp"
+                    android:textColor="#717171"
+                    android:textSize="20dp"></EditText>
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/search"
+                    ></Button>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="food name"
-            android:textSize="30dp"></TextView>
-        <TableLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:stretchColumns="*">
-        <TableRow>
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/biankuang1"
+            android:orientation="vertical">
+
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/foodname"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="protein(g)"></TextView>
-            <TextView
-                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="food name"
+                android:textColor="#717171"
+                android:textSize="30dp"></TextView>
+            <TableLayout
                 android:layout_height="wrap_content"
-                android:text="fat(g)"></TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="carb(g)"></TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="energy(kj)"></TextView>
-        </TableRow>
-            <TableRow>
+                android:layout_width="350dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:stretchColumns="*">
+            <TableRow
+                android:layout_marginTop="20dp">
                 <TextView
-                    android:id="@+id/p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#717171"
                     android:text="protein(g)"></TextView>
                 <TextView
-                    android:id="@+id/f"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#717171"
                     android:text="fat(g)"></TextView>
                 <TextView
-                    android:id="@+id/c"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#717171"
                     android:text="carb(g)"></TextView>
                 <TextView
-                    android:id="@+id/cal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#717171"
                     android:text="energy(kj)"></TextView>
             </TableRow>
-        </TableLayout>
-        <Button
-            android:id="@+id/rs1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="recent search"></Button>
-        <Button
-            android:id="@+id/rs2"
-            android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="recent search"></Button>
-        <Button
-            android:id="@+id/rs3"
-            android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="recent search"></Button>
+                <TableRow
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:id="@+id/p"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#717171"
+                        android:text="protein(g)"></TextView>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#717171"
+                        android:text="fat(g)"></TextView>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#717171"
+                        android:text="carb(g)"></TextView>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/cal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#717171"
+                        android:text="energy(kj)"></TextView>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="180dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rs1"
+                android:background="@drawable/buttongreen"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="#717171"
+
+                android:text="recent"></Button>
+            <Button
+                android:id="@+id/rs2"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="#717171"
+                android:background="@drawable/buttongreen"
+            android:text="recent"></Button>
+            <Button
+                android:id="@+id/rs3"
+                android:layout_marginTop="15dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="#717171"
+                android:background="@drawable/buttongreen"
+            android:text="recent"></Button>
+
+
+        </LinearLayout>
         <Button
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="back"></Button>
+            android:id="@+id/back"
+            android:background="@drawable/buttongreen"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#717171"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="back"></Button>
     </LinearLayout>
 
 
