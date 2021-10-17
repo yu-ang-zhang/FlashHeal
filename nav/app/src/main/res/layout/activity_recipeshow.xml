@@ -58,6 +58,7 @@
                 android:layout_below="@+id/list1"
                 android:layout_gravity="center"
                 android:background="@drawable/background"
+                android:textSize="15dp"
                 ></TextView>
 
             <TextView
@@ -70,16 +71,16 @@
                 android:textStyle="bold"></TextView>
 
             <TextView
-                android:paddingTop="20dp"
-                android:paddingBottom="40dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
                 android:id="@+id/directions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/background"
-                ></TextView>
+                android:paddingLeft="30dp"
+                android:paddingTop="20dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="40dp"
+                android:textSize="15dp"></TextView>
 
             <TextView
                 android:text="Calories"
@@ -91,18 +92,20 @@
                 android:textStyle="bold"></TextView>
 
             <TextView
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
                 android:id="@+id/calories"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_below="@+id/list3"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/background"
-                android:layout_marginBottom="20dp"></TextView>
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:textSize="15dp"></TextView>
 
             <Space
                 android:id="@+id/spacer2"

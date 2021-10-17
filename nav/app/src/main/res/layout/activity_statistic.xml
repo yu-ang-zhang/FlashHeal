@@ -7,19 +7,20 @@
     android:orientation="vertical"
     tools:context=".statistic"
     >
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
+        android:background="@color/lightGreen"
         android:gravity="center"
         android:paddingTop="30dp"
         android:paddingBottom="10dp"
         android:text="Statistic"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        android:background="@color/lightGreen"></TextView>
+        android:textSize="30dp"></TextView>
 
     <LinearLayout
         android:id="@+id/progress"
@@ -69,14 +70,18 @@
                 android:textSize="15dp"></TextView>
         </RelativeLayout>
 
+
         <ProgressBar
-            android:id="@+id/weight"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="400dp"
-            android:layout_height="15dp"
-            android:layout_gravity="center"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"></ProgressBar>
+            android:id="@+id/pb_progressbar"
+            style="@style/StyleProgressBarMini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_progressbar_bg"
+            android:max="100"
+            android:progress="50" />
     </LinearLayout>
 
     <LinearLayout
@@ -108,13 +113,13 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Have Lost:"
-                android:textSize="15dp"></TextView>
+                android:textSize="20dp"></TextView>
 
             <TextView
                 android:id="@+id/havelost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"></TextView>
 
@@ -131,13 +136,13 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Still Remaining:"
-                android:textSize="15dp"></TextView>
+                android:textSize="20dp"></TextView>
 
             <TextView
                 android:id="@+id/still"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"></TextView>
 

@@ -62,6 +62,8 @@
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/radiobutton_background.xml" value="0.209375" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/recipe_background.xml" value="0.21979166666666666" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/select.xml" value="0.209375" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/shape_progressbar_bg.xml" value="0.22135416666666666" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/drawable/shape_progressbar_mini.xml" value="0.22135416666666666" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout-finger/activity_main_text.xml" value="0.20104166666666667" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_add_breakfast.xml" value="0.25" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_add_dinner.xml" value="0.20625" />
@@ -80,7 +82,7 @@
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_recipeshow.xml" value="0.25" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_setting.xml" value="0.2046875" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_snack.xml" value="0.20260416666666667" />
-        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_statistic.xml" value="0.1" />
+        <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/activity_statistic.xml" value="0.25" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/content_main.xml" value="0.19583333333333333" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/fragment_fg_add.xml" value="0.20260416666666667" />
         <entry key="..\:/workspace/7381/FlashHeal/nav/app/src/main/res/layout/fragment_fg_b_favorites.xml" value="0.20260416666666667" />
