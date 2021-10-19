@@ -12,32 +12,38 @@
         android:layout_height="wrap_content"
         android:stretchColumns="1">
 
-        <TableRow android:paddingTop="20dp"
-            android:background="#8BC34A"
-            >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#77CE92"
+            android:paddingTop="20dp">
 
             <ImageButton
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_back"></ImageButton>
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/ic_action_back"
+                app:tint="@color/white"></ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:text="SNACK"
-                android:textSize="30dp"
+                android:gravity="center"
                 android:paddingBottom="20dp"
-                ></TextView>
+                android:text="SNACK"
+                android:textColor="@color/white"
+                android:textSize="30dp"></TextView>
 
             <ImageButton
                 android:id="@+id/add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/adding"
-                ></ImageButton>
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="-5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add2"
+                android:backgroundTint="#00FFFFFF"></ImageButton>
         </TableRow>
     </TableLayout>
 
@@ -80,82 +86,130 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/textview_style"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="RECENT"
+            android:textSize="25dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RECENT"></TextView>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:textColor="#A9A9A9"
+                android:text="meal name"></TextView>
+
+            <TextView
+                android:id="@+id/rname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:textColor="#A9A9A9"
+                android:text="foods and weights"></TextView>
+
+            <TextView
+                android:id="@+id/rfandw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#A9A9A9"
+                android:text="calories"></TextView>
+
+            <TextView
+                android:id="@+id/rcalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></TextView>
+        </LinearLayout>
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="meal name"
-            ></TextView>
-        <TextView
-            android:id="@+id/rname"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/textview_style"
+            android:textColor="@color/white"
             android:gravity="center"
-            ></TextView>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="foods and weights"
-            ></TextView>
-        <TextView
-            android:id="@+id/rfandw"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"        ></TextView>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="calories"
-            ></TextView>
-        <TextView
-            android:id="@+id/rcalories"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"        ></TextView>
+            android:text="FAVOURITE"
+            android:textSize="25dp"></TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FAVORITE"></TextView>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="meal name"
-            ></TextView>
-        <TextView
-            android:id="@+id/name"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            ></TextView>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="foods and weights"
-            ></TextView>
-        <TextView
-            android:id="@+id/fandw"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"        ></TextView>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="calories"
-            ></TextView>
-        <TextView
-            android:id="@+id/calories"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"        ></TextView>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:textColor="#A9A9A9"
+                android:text="meal name"></TextView>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:textColor="#A9A9A9"
+                android:text="foods and weights"></TextView>
+
+            <TextView
+                android:id="@+id/fandw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#A9A9A9"
+                android:text="calories"></TextView>
+
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></TextView>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

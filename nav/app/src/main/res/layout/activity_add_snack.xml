@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EBEBEB"
     tools:context=".add_snack"
     android:orientation="vertical">
 
@@ -13,49 +14,56 @@
         android:stretchColumns="1">
 
         <TableRow android:paddingTop="20dp"
-            android:background="#8BC34A"
+            android:background="#77CE92"
             >
 
             <ImageButton
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_back"></ImageButton>
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/adding"
+                app:tint="@color/white"
+                tools:src="@drawable/ic_action_back"></ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:text="RECORD SNACK"
-                android:textSize="30dp"
+                android:fontFamily="sans-serif"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
                 android:paddingBottom="20dp"
+                android:text="RECORD SNACK"
+                android:textColor="@color/white"
+                android:textSize="30dp"
                 ></TextView>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/adding"
-                ></ImageButton>
         </TableRow>
     </TableLayout>
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="84dp"
             android:layout_height="wrap_content"
-            android:text="NAME:"
-            android:textSize="30dp"
+            android:gravity="center"
             android:paddingTop="10dp"
+            android:text="NAME"
+            android:textColor="#A9A9A9"
+            android:textSize="30dp"
             ></TextView>
 
         <EditText
             android:id="@+id/snack_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/search_style"
+            android:textColor="#A9A9A9"
             android:hint="make a name for recording"
-            android:textSize="30dp"></EditText>
+            android:textSize="20dp"></EditText>
 
         <TableRow
             android:orientation="horizontal"
@@ -68,26 +76,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="#A9A9A9"
                 android:text="FOOD:"
                 android:textSize="18dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#A9A9A9"
                 android:text="WEIGHT:(g)"
                 android:textSize="18dp"></TextView>
         </TableRow>
     </TableLayout>
 
     <GridLayout
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_style"
         android:columnCount="3"
-        android:rowCount="10"
-        android:background="#999999">
+        android:orientation="horizontal"
+        android:rowCount="10">
 
         <EditText
             android:id="@+id/food1"
@@ -95,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:hint="what you eat"
             android:inputType="text"></EditText>
 
@@ -109,7 +119,7 @@
             android:id="@+id/food2"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="what you eat"></EditText>
@@ -123,7 +133,7 @@
             android:id="@+id/food3"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="what you eat"></EditText>
@@ -138,7 +148,7 @@
             android:id="@+id/food4"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="what you eat"></EditText>
@@ -153,7 +163,7 @@
             android:id="@+id/food5"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="what you eat"></EditText>
@@ -168,7 +178,7 @@
             android:id="@+id/food6"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="what you eat"></EditText>
@@ -183,7 +193,7 @@
             android:id="@+id/food7"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
-            android:background="#888888"
+            android:textColor="#A9A9A9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="what you eat"></EditText>
@@ -195,20 +205,35 @@
             android:layout_height="wrap_content"
             ></EditText>
     </GridLayout>
-    <Button
-        android:id="@+id/favorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="favorite"
-        android:textSize="30dp"></Button>
-    <Button
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="ADD"
-        android:textSize="30dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"></Button>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/textview_style"
+            android:text="ADD"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/favorite"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/textview_style"
+            android:text="favorite"
+            android:textSize="20dp"></Button>
+
+    </LinearLayout>
 </LinearLayout>

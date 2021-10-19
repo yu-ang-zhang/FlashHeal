@@ -7,38 +7,50 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
     android:orientation="vertical">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/add">
+        android:layout_marginTop="80dp"
+        android:src="@drawable/profile_icon3">
     </ImageView>
     <Button
         android:id="@+id/st"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
-        android:drawableRight="@drawable/adding"
-        android:drawableLeft="@drawable/adding"
+
+        android:background="@drawable/duihuakuang"
+        android:drawableLeft="@drawable/profile_icon1"
         android:text="statistics"
+        android:textColor="#717171"
+        android:layout_marginTop="40dp"
         android:textSize="30dp"></Button>
 
     <Button
         android:id="@+id/se"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
-        android:drawableLeft="@drawable/adding"
-        android:drawableRight="@drawable/adding"
+        android:background="@drawable/duihuakuang"
+        android:drawableLeft="@drawable/profile_icon2"
+
         android:text="setting"
+        android:textColor="#717171"
+        android:layout_marginTop="10dp"
         android:textSize="30dp"></Button>
 
     <Button
         android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#717171"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/buttongreen"
+
         android:text="back"></Button>
 </LinearLayout>
 

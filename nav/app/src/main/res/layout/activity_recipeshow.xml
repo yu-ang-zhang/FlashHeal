@@ -12,15 +12,14 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:background="@color/lightGreen"
         android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:paddingTop="30dp"
         android:paddingBottom="10dp"
+        android:paddingTop="30dp"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        ></TextView>
+        android:textSize="30dp"></TextView>
 
     <ScrollView
         android:layout_width="match_parent"
