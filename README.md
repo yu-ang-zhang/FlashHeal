@@ -12,7 +12,6 @@ this is an Android app, programming by using Android Studio.
 
 .xml files - front-end programming files, displaying UI designs.
 
-
 ## Instruction
 1. Download and install Android Studio
 2. Download and install gradle 7.0.1
@@ -23,7 +22,8 @@ this is an Android app, programming by using Android Studio.
 7. Open the folder in Android Studio
 8. Double click FlashHeal > nav > app > src > main > res > layout > activity_login.xml
 9. If you can see the UI page, continue. If cannot, check and redo from step 2.
-10. 
+10. Open Tools > AVD manager -> create virtual device -> Pixel 4 XL -> next -> download API26 or higher -> next -> finish
+11. After downloading and installing, you can click 'Run app' (green taiangle) button on the top tool bar and use the app.
 
 ## Reference
 
