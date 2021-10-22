@@ -12,20 +12,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Samarth on 23-Nov-16.
+ * food database
+ *
  */
-
 public class databasehandler extends SQLiteOpenHelper {
 
-
+    /**
+     * database version
+     */
     private static final int DATABASE_VERSION = 1;
-
+    /**
+     * database name
+     */
     private static final String DATABASE_NAME = "Foodmanager";
-
+    /**
+     * database table name
+     */
     private static final String TABLE_FOOD = "Food";
-    private static databasehandler dbhelper;
-
-    private static final String KEY_ID= "id";
+    /**
+     * text used in SQL table
+     */
     private static final String FOOD_CATEGORY = "Food_category";
     private static final String FOOD_ITEM = "Food_item";
     private static final String  PROTEINS = "Proteins";
@@ -33,21 +39,22 @@ public class databasehandler extends SQLiteOpenHelper {
     private static final String  CARB = "carb";
     private static final String  CALORIES = "calories";
 
-    public static synchronized databasehandler getInstance(Context context) {
 
-
-        if (dbhelper == null) {
-            dbhelper = new databasehandler(context.getApplicationContext());
-        }
-        return dbhelper;
-    }
-
-
+    /**
+     * constructor
+     *
+     * @param context where to construct the database
+     */
     public databasehandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    // Creating Tables
+    /**
+     * initialize database and add data into
+     *
+     * data from:
+     * Find Nutritional Value of a Product. (2021). Nutritional Value. https://www.nutritionvalue.org/
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -1821,44 +1828,21 @@ public class databasehandler extends SQLiteOpenHelper {
         addfood(new food_items_model("Cereals ,Grains and Pasta","Wild rice, cooked",4f,0.3f,21f,101f),db);
         addfood(new food_items_model("Cereals ,Grains and Pasta","Wild rice, raw",15f,1.1f,75f,357f),db);
 
-//        db.close(); // Closing database connection
     }
 
-    // Upgrading database
+    /**
+     * upgrade database
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FOOD);
-
-        // Create tables again
         onCreate(db);
     }
 
-    /**,
-     * All CRUD(Create, Read, Update, Delete) Operations
+    /**
+     * add new data into database
      */
-
-    // Adding new contact
-    public void addfood(food_items_model food_item) {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        try {
-            ContentValues values = new ContentValues();
-            values.put(FOOD_CATEGORY, food_item.getfood_category());
-            values.put(FOOD_ITEM, food_item.getfood_item());
-            values.put(PROTEINS, food_item.getproteins());
-            values.put(FAT, food_item.getfat());
-            values.put(CARB, food_item.getcarb());
-            values.put(CALORIES, food_item.getcalorie());
-
-            db.insertOrThrow(TABLE_FOOD, null, values);
-//            db.close(); // Closing database connection
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-    }
     public void addfood(food_items_model food_item, SQLiteDatabase db ) {
-//        db=getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(FOOD_CATEGORY, food_item.getfood_category());
         values.put(FOOD_ITEM, food_item.getfood_item());
@@ -1870,93 +1854,14 @@ public class databasehandler extends SQLiteOpenHelper {
         db.insert(TABLE_FOOD, null, values);
     }
 
-    // Getting single food item
-    public food_items_model getfood_item(int id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.query(TABLE_FOOD, new String[] { KEY_ID, FOOD_CATEGORY,
-                        FOOD_ITEM, PROTEINS, FAT, CARB, CALORIES }, KEY_ID + "=?",
-                new String[] { String.valueOf(id) }, null, null, null, null);
-        if (cursor != null)
-            cursor.moveToFirst();
-
-        assert cursor != null;
-        food_items_model food_item = new food_items_model(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2),Float.parseFloat(cursor.getString(3)),
-                Float.parseFloat(cursor.getString(4)),Float.parseFloat(cursor.getString(5)),Float.parseFloat(cursor.getString(6)));
-        // return contact
-        return food_item;
-    }
-
-    public List<String> getfood_category_list() {
-
-        List<String> food_category_list=new ArrayList<>();
-        food_category_list.add("Dairy and Egg Products");   //done//
-        food_category_list.add("Spices and Herbs");//done//
-        food_category_list.add("Fats and Oils");//done//
-        food_category_list.add("Soups and Sauces");//done//
-        food_category_list.add("Fruits");//done//
-        food_category_list.add("Vegetables");//done//
-        food_category_list.add("Nut and Seed Products");//done//
-        food_category_list.add("Restaurant Foods");
-        food_category_list.add("Baby Foods");//done//
-        food_category_list.add("Beverages");//done//
-        food_category_list.add("Legumes and Legume Products");
-        food_category_list.add("Sausages and Luncheon Meats");
-        food_category_list.add("Baked Products");
-        food_category_list.add("Fast Food");//done//
-        food_category_list.add("Poultry Products");
-        food_category_list.add("Snacks");
-        food_category_list.add("Sweets");//done//
-        food_category_list.add("Cereals ,Grains and Pasta");
-
-        return food_category_list;
-    }
-
-    public List<food_items_model> getAllfood_items(String food_category) {
-        List<food_items_model> food_item_list = new ArrayList<>();
-        // Select All Query
-        String selectQuery = "SELECT  * FROM " + TABLE_FOOD;
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
-
-        while(cursor.moveToNext())
-        {
-            Log.i("Cursor row value",cursor.getPosition()+"");
-            if(cursor.getString(cursor.getColumnIndex(FOOD_CATEGORY)).
-                    equals(food_category))
-            {
-                while (cursor.getString(cursor.getColumnIndex(FOOD_CATEGORY)).
-                        equals(food_category))
-                {
-                    food_items_model food_item = new food_items_model();
-                    food_item.setfood_category(cursor.getString(cursor.getColumnIndex(FOOD_CATEGORY)));
-                    food_item.setfood_item(cursor.getString(cursor.getColumnIndex(FOOD_ITEM)));
-                    food_item.setproteins(Float.parseFloat(cursor.getString(cursor.getColumnIndex(PROTEINS))));
-                    food_item.setfat(Float.parseFloat(cursor.getString(cursor.getColumnIndex(FAT))));
-                    food_item.setcarb(Float.parseFloat(cursor.getString(cursor.getColumnIndex(CARB))));
-                    food_item.setcalorie(Float.parseFloat(cursor.getString(cursor.getColumnIndex(CALORIES))));
-                    food_item_list.add(food_item);
-                    cursor.moveToNext();
-                    if(cursor.getPosition()==cursor.getCount()) break;
-                }
-            }
-            if(food_item_list.size()!=0) return food_item_list;
-        }
-        return food_item_list;
-    }
-
-
+    /**
+     * return all data as a list
+     */
     public List<food_items_model> getAllfooditems() {
         List<food_items_model> food_itemList = new ArrayList<>();
-        // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_FOOD;
-
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
                 food_items_model food_item = new food_items_model();
@@ -1971,80 +1876,7 @@ public class databasehandler extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-        // return contact list
         return food_itemList;
     }
-
-
-    public String getFoodCategory(String FoodItem)
-    {
-        Cursor cursor=null;
-        String food_Catg="";
-        SQLiteDatabase db = this.getWritableDatabase();
-        try {
-            cursor = db.rawQuery("SELECT Food_category FROM Food WHERE Food_item=?", new String[] {FoodItem + ""});
-            if(cursor.getCount() > 0) {
-                cursor.moveToFirst();
-                food_Catg = cursor.getString(cursor.getColumnIndex("Food_category"));
-            }
-            return food_Catg;
-        }finally {
-            cursor.close();
-        }
-    }
-
-    public int getFoodItemId(String FoodItem)
-    {
-        Cursor cursor=null;
-        int food_item_id=0;
-        SQLiteDatabase db = this.getWritableDatabase();
-        try {
-            cursor = db.rawQuery("SELECT id FROM Food WHERE Food_item=?", new String[] {FoodItem + ""});
-            if(cursor.getCount() > 0) {
-                cursor.moveToFirst();
-                food_item_id = cursor.getInt(cursor.getColumnIndex("id"));
-            }
-            return food_item_id;
-        }finally {
-            cursor.close();
-        }
-    }
-
-    // Updating single contact
-    public int updatefood(food_items_model food_item) {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(FOOD_CATEGORY, food_item.getfood_category());
-        values.put(FOOD_ITEM, food_item.getfood_item());
-        values.put(PROTEINS, food_item.getproteins());
-        values.put(FAT, food_item.getfat());
-        values.put(CARB, food_item.getcarb());
-        values.put(CALORIES, food_item.getcalorie());
-
-        // updating row
-        return db.update(TABLE_FOOD, values, FOOD_CATEGORY + " = ?",
-                new String[] { food_item.getfood_category() });
-    }
-
-    // Deleting single contact
-    public void deletefood(food_items_model food_item) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_FOOD, FOOD_CATEGORY + " = ?",
-                new String[] { food_item.getfood_category() });
-        db.close();
-    }
-
-    // Getting contacts Count
-    public int getfoodCount() {
-        String countQuery = "SELECT  * FROM " + TABLE_FOOD;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
-
-        // return count
-        return cursor.getCount();
-    }
-
 }
 

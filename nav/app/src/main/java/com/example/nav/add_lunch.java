@@ -11,28 +11,67 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
+/**
+ * page of record a new lunch
+ * can set the lunch as favorite
+ */
 public class add_lunch extends AppCompatActivity {
+    /**
+     * input food names to record
+     */
     EditText food1;
     EditText food2;
     EditText food3;
     EditText food4;
     EditText food5;
     EditText food6;
+    /**
+     * input food weights to record
+     */
     EditText weight1;
     EditText weight2;
     EditText weight3;
     EditText weight4;
     EditText weight5;
     EditText weight6;
+    /**
+     * name this meal
+     */
     EditText name;
+    /**
+     * database
+     */
     databasehandler db;
+    /**
+     * calories of this meal
+     */
     double kaluli;
+    /**
+     * jump to next page
+     */
     Intent intent;
+    /**
+     * record this meal by this button
+     */
     Button add;
+    /**
+     * set to favorite by this button
+     */
     Button favorite;
+    /**
+     * a new recorded_lunch class
+     */
     recorded_lunch l;
+    /**
+     * this meal is not favorite
+     */
     boolean f = false;
 
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

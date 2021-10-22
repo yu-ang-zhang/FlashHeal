@@ -12,37 +12,50 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+/**
+ * recipe database
+ */
 public class recipedata extends SQLiteOpenHelper {
-
+    /**
+     * database version
+     */
     private static final int DATABASE_VERSION = 1;
-
+    /**
+     * database name
+     */
     private static final String DATABASE_NAME = "recipemanager";
-
+    /**
+     * database table name
+     */
     private static final String TABLE_RECIPE = "Recipe";
+    /**
+     * database handler
+     */
     private static databasehandler dbhelper;
-
-    private static final String KEY_ID= "id";
+    /**
+     * text used in SQL table
+     */
     private static final String RECIPE_NAME = "Recipe_name";
     private static final String FOOD_ITEM = "Food_item";
     private static final String Cooking_Recipe = "recipe";
     private static final String  CALORIES = "calories";
 
-    public static synchronized databasehandler getInstance(Context context) {
-
-
-        if (dbhelper == null) {
-            dbhelper = new databasehandler(context.getApplicationContext());
-        }
-        return dbhelper;
-    }
-
+    /**
+     * constructor
+     *
+     * @param context where to construct the database
+     */
     public recipedata(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
 
-
+    /**
+     * initialize database and add data into
+     *
+     * data from"
+     * Healthy Ways to Lose Weight. (2021). EatingWell. https://www.eatingwell.com/category/4236/weight-loss/
+     */
     @Override
     public void onCreate(SQLiteDatabase db){
     String CREATE_TABLE_RECIPE = "CREATE TABLE " + TABLE_RECIPE +" (id INTEGER PRIMARY KEY AUTOINCREMENT,Recipe_name TEXT,Food_item TEXT,recipe TEXT,calories REAL)";
@@ -291,7 +304,9 @@ public class recipedata extends SQLiteOpenHelper {
                 "Step 5\n" +
                 "Leaving a 1/4-inch-thick wall, carefully scoop out the eggplant flesh and chop. Stir the eggplant flesh into the couscous along with almonds, parsley and the remaining 1 tablespoon oil. Mound the filling in the eggplant shells. Serve with the sauce.",457 ),db);
     }
-
+    /**
+     * add new recipe into database
+     */
     public void addrecipe(recipe_items_model recipe_items_model, SQLiteDatabase db ) {
         ContentValues values = new ContentValues();
         values.put(RECIPE_NAME, recipe_items_model.getRecipe_name());
@@ -300,13 +315,17 @@ public class recipedata extends SQLiteOpenHelper {
         values.put(CALORIES, recipe_items_model.getcalorie());
         db.insert(TABLE_RECIPE, null, values);
     }
-
+    /**
+     * upgrade database
+     */
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_RECIPE);
         onCreate(sqLiteDatabase);
     }
-
+    /**
+     * get all recipes as a list
+     */
     public List<recipe_items_model> getAllrecipes() {
         List<recipe_items_model> recipe_list = new ArrayList<>();
         String selectQuery = "SELECT  * FROM " + TABLE_RECIPE;

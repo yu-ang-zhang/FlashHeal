@@ -13,29 +13,57 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link fg_plan#newInstance} factory method to
- * create an instance of this fragment.
+ * retriever page
  */
 public class fg_plan extends Fragment {
 
+    /**
+     * button storing previous search
+     */
     private Button rs1;
     private Button rs2;
     private Button rs3;
-    private Button rs4;
-    private Button search;
-    private Button b;
+    /**
+     * food name
+     */
     private TextView name;
+    /**
+     * food protein
+     */
     private TextView pro;
+    /**
+     * food fat
+     */
     private TextView fat;
+    /**
+     * food carb
+     */
     private TextView carb;
+    /**
+     * food calories
+     */
     private TextView calo;
+    /**
+     * searched food name
+     */
     private EditText nameinput;
+    /**
+     * jump to next page
+     */
     private Intent intent;
+    /**
+     * a searchedfood class storing food information
+     */
     private searchedfood sfood;
+    /**
+     * food database
+     */
     databasehandler db;
-
+    /**
+     * counter
+     */
     int i = 0;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -69,6 +97,11 @@ public class fg_plan extends Fragment {
         return fragment;
     }
 
+        /**
+     * initialize fragment.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -83,7 +116,7 @@ public class fg_plan extends Fragment {
 
         db = new databasehandler(getContext());
 
-        search = (Button) getActivity().findViewById(R.id.search);
+        Button search = (Button) getActivity().findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -155,7 +188,7 @@ public class fg_plan extends Fragment {
             }
         });
 
-        b = getActivity().findViewById(R.id.back);
+        Button b = getActivity().findViewById(R.id.back);
         intent = new Intent(getActivity(),MainActivity.class);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,7 +199,9 @@ public class fg_plan extends Fragment {
 
 
     }
-
+    /**
+     * initialize fragment view.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

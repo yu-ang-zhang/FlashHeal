@@ -13,16 +13,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link fg_recipe#newInstance} factory method to
- * create an instance of this fragment.
+ * recipe page
  */
 public class fg_recipe extends Fragment {
-
-    private Button br;
-    private Button lu;
-    private Button di;
-    private Button sn;
+    /**
+     * jump to next page
+     */
     private Intent intent_next;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +31,6 @@ public class fg_recipe extends Fragment {
     private String mParam2;
 
     public fg_recipe() {
-        // Required empty public constructor
     }
 
     /**
@@ -65,11 +60,16 @@ public class fg_recipe extends Fragment {
         }
     }
 
+        /**
+     * initialize fragment.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        br = (Button) getActivity().findViewById(R.id.breakfastr);
+        Button br = (Button) getActivity().findViewById(R.id.breakfastr);
         br.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,7 +78,7 @@ public class fg_recipe extends Fragment {
             }
         });
 
-        lu = (Button) getActivity().findViewById(R.id.lunchr);
+        Button lu = (Button) getActivity().findViewById(R.id.lunchr);
         lu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +87,7 @@ public class fg_recipe extends Fragment {
             }
         });
 
-        di = (Button) getActivity().findViewById(R.id.dinnerr);
+        Button di = (Button) getActivity().findViewById(R.id.dinnerr);
         di.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,7 +96,7 @@ public class fg_recipe extends Fragment {
             }
         });
 
-        sn = (Button) getActivity().findViewById(R.id.snackr);
+        Button sn = (Button) getActivity().findViewById(R.id.snackr);
         sn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,7 +105,9 @@ public class fg_recipe extends Fragment {
             }
         });
     }
-
+    /**
+     * initialize fragment view.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

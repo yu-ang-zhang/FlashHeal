@@ -8,14 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+/**
+ * log in page
+ */
 public class login extends AppCompatActivity {
-
+    /**
+     * user name
+     */
     private EditText username;
-    private Button button_login;
+    /**
+     * jump to next page
+     */
     private Intent intent_login;
 
 
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +37,7 @@ public class login extends AppCompatActivity {
 
         intent_login=new Intent(login.this,gender.class);
 
-        button_login=(Button)findViewById(R.id.button_login);
+        Button button_login = (Button) findViewById(R.id.button_login);
 
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,16 +16,13 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link fg_diary#newInstance} factory method to
- * create an instance of this fragment.
+ * diary page
  */
 public class fg_diary extends Fragment {
 
-    private Button breakfast;
-    private Button lunch;
-    private Button dinner;
-    private Button snack;
+    /**
+     * jump to next page
+     */
     Intent intent_next;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -58,23 +55,29 @@ public class fg_diary extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    /**
+     * initialize fragment.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
+        /**
+     * initialize fragment.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         TextView kaluli = (TextView)getActivity().findViewById(R.id.kaluli);
-//        kaluli.setText(String.valueOf(UserJoinInfo.getKaluli()).substring(0,3));
         kaluli.setText(String.valueOf((int) UserJoinInfo.getKaluli()));
 
         TextView eaten = (TextView)getActivity().findViewById(R.id.eaten);
-//        eaten.setText(String.valueOf(recordedmeal.getMealkaluli()).substring(0,3));
         eaten.setText(String.valueOf((int) recordedmeal.getMealkaluli()));
 
         TextView left = (TextView)getActivity().findViewById(R.id.kalulileft);
-//        left.setText(String.valueOf(UserJoinInfo.getKaluli() - recordedmeal.getMealkaluli()).substring(0,3));
         left.setText(String.valueOf((int) UserJoinInfo.getKaluli() - (int) recordedmeal.getMealkaluli()));
 
-        breakfast = (Button) getActivity().findViewById(R.id.add_b);
+        Button breakfast = (Button) getActivity().findViewById(R.id.add_b);
         breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +86,7 @@ public class fg_diary extends Fragment {
             }
         });
 
-        lunch = (Button) getActivity().findViewById(R.id.add_l);
+        Button lunch = (Button) getActivity().findViewById(R.id.add_l);
         lunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,7 +95,7 @@ public class fg_diary extends Fragment {
             }
         });
 
-        dinner = (Button) getActivity().findViewById(R.id.add_d);
+        Button dinner = (Button) getActivity().findViewById(R.id.add_d);
         dinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +104,7 @@ public class fg_diary extends Fragment {
             }
         });
 
-        snack = (Button) getActivity().findViewById(R.id.add_s);
+        Button snack = (Button) getActivity().findViewById(R.id.add_s);
         snack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,7 +113,9 @@ public class fg_diary extends Fragment {
             }
         });
     }
-
+    /**
+     * initialize fragment view.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

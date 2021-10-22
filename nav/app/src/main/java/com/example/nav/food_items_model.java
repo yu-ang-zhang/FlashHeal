@@ -4,24 +4,47 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by Samarth on 23-Nov-16.
+ * model stroing food information used in food database
  */
 
 public class food_items_model implements Parcelable {
-
+    /**
+     * food category
+     */
     public String food_category;
+    /**
+     * auto-generated id
+     */
     public int id;
+    /**
+     * food name
+     */
     public String food_item;
+    /**
+     * food protein
+     */
     public float proteins;
+    /**
+     * food fat
+     */
     public float fat;
+    /**
+     * food carb
+     */
     public float carb;
+    /**
+     * food calories
+     */
     public float calorie;
-
-    // Empty constructor
+    /**
+     * constructor
+     */
     public food_items_model(){
 
     }
-    // constructor
+    /**
+     * constructor
+     */
     public food_items_model(String food_category, String food_item, float proteins, float fat, float carb, float calorie){
         this.food_category = food_category;
         this.food_item= food_item;
@@ -30,65 +53,82 @@ public class food_items_model implements Parcelable {
         this.calorie=calorie;
         this.fat=fat;
     }
-    public food_items_model(int id, String food_category, String food_item, float proteins, float fat, float carb, float calorie){
-        this.id=id;
-        this.food_category = food_category;
-        this.food_item= food_item;
-        this.proteins = proteins;
-        this.carb=carb;
-        this.calorie=calorie;
-        this.fat=fat;
-    }
-
-    public int gettId(){
-        return this.id;
-    }
+    /**
+     * set food item id
+     */
     public void setId(int id)
     {
         this.id=id;
     }
-
+    /**
+     * get food item category
+     */
     public String getfood_category(){
         return this.food_category;
     }
-
+    /**
+     * set food item category
+     */
     public void setfood_category(String food_category){
         this.food_category = food_category;
     }
-
+    /**
+     * get food item name
+     */
     public String getfood_item(){
         return this.food_item;
     }
-
+    /**
+     * set food item name
+     */
     public void setfood_item(String food_item){
         this.food_item = food_item;
     }
-
+    /**
+     * get food item protein
+     */
     public float getproteins(){
         return this.proteins;
     }
-
+    /**
+     * set food item protein
+     */
     public void setproteins(float proteins){
         this.proteins = proteins;
     }
+    /**
+     * get food item fat
+     */
     public float getfat(){
         return this.fat;
     }
-
+    /**
+     * set food item fat
+     */
     public void setfat(float fat){
         this.fat = fat;
     }
+    /**
+     * get food item carb
+     */
     public float getcarb(){
         return this.carb;
     }
-
+    /**
+     * set food item carb
+     */
     public void setcarb(float carb){
         this.carb = carb;
     }
+    /**
+     * get food item calorie
+     */
     public float getcalorie(){
         return  this.calorie;
     }
-
+    /**
+     * set food item calorie
+     */
     public void setcalorie(float calorie){
         this.calorie = calorie;
     }

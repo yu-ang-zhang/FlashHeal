@@ -8,15 +8,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+/**
+ * update user information
+ */
 public class setting extends AppCompatActivity {
-    private Button b;
-    private Button c;
+    /**
+     * new user age
+     */
     private EditText age;
+    /**
+     * new user height
+     */
     private EditText height;
+    /**
+     * new user current weight
+     */
     private EditText current;
+    /**
+     * new user goal weight
+     */
     private EditText goal;
 
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +44,7 @@ public class setting extends AppCompatActivity {
         current = findViewById(R.id.newcw);
         goal = findViewById(R.id.newgw);
 
-        c = findViewById(R.id.confirm);
+        Button c = findViewById(R.id.confirm);
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +60,7 @@ public class setting extends AppCompatActivity {
             }
         });
 
-        b = findViewById(R.id.back);
+        Button b = findViewById(R.id.back);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

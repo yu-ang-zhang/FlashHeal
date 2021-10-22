@@ -9,18 +9,36 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
+/**
+ * track weight change
+ */
 public class statistic extends AppCompatActivity {
-
-    private Button b;
-    private Button update;
-    private Button set;
+    /**
+     * a progress bar showing weight change
+     */
     private ProgressBar weight;
+    /**
+     * update new current weight
+     */
     private EditText current;
+    /**
+     * how many kg have lost
+     */
     private TextView have;
+    /**
+     * how many kg still needed to be lost
+     */
     private TextView still;
+    /**
+     * jump to next page
+     */
     private Intent intent;
 
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +49,7 @@ public class statistic extends AppCompatActivity {
         weight.setMax(UserJoinInfo.getUserWeight() - UserJoinInfo.getGoalweight());
         have = findViewById(R.id.havelost);
         still = findViewById(R.id.still);
-        update = findViewById(R.id.up);
+        Button update = findViewById(R.id.up);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,9 +59,9 @@ public class statistic extends AppCompatActivity {
             }
         });
 
-        set = findViewById(R.id.se);
+        Button set = findViewById(R.id.se);
 
-        b = findViewById(R.id.back);
+        Button b = findViewById(R.id.back);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

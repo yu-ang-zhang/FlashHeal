@@ -15,22 +15,50 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.Map;
-
+/**
+ * showing the recent recorded and favorite dinner
+ */
 public class dinner extends AppCompatActivity
 {
+    /**
+     * back button
+     */
+    private ImageButton back;
+    /**
+     * add button
+     */
+    private ImageButton add;
+    /**
+     * recent recorded meal name
+     */
     private TextView rname;
+    /**
+     * recent recorded food weight
+     */
     private TextView rfw;
+    /**
+     * recent recorded meal calories
+     */
     private TextView rcl;
+    /**
+     * favorite meal name
+     */
     private TextView name;
+    /**
+     * favorite food weight
+     */
     private TextView fw;
+    /**
+     * favorite meal calories
+     */
     private TextView cl;
 
-    private ImageButton back;
-    private ImageButton add;
-    private Intent intent;
-
-    private Fragment fg1,fg2;
     private FragmentManager fManager;
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

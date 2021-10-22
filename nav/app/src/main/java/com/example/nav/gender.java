@@ -7,13 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+/**
+ * choose user gender
+ */
 public class gender extends AppCompatActivity{
-
-    private ImageButton Male;
-    private ImageButton Female;
+    /**
+     * jump to next page
+     */
     private Intent intent_next;
 
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +29,8 @@ public class gender extends AppCompatActivity{
 
         intent_next=new Intent(gender.this, moreBioInfo.class);
 
-        Male = findViewById(R.id.male);
-        Male.setOnClickListener(new View.OnClickListener() {
+        ImageButton male = findViewById(R.id.male);
+        male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UserJoinInfo.setUserGender(true);
@@ -32,8 +39,8 @@ public class gender extends AppCompatActivity{
             }
         });
 
-        Female = findViewById(R.id.female);
-        Female.setOnClickListener(new View.OnClickListener() {
+        ImageButton female = findViewById(R.id.female);
+        female.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UserJoinInfo.setUserGender(false);

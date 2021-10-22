@@ -12,15 +12,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link fg_profile#newInstance} factory method to
- * create an instance of this fragment.
+ * profile page
  */
 public class fg_profile extends Fragment {
-
-    private Button b;
-    private Button sta;
-    private Button set;
+    /**
+     * jump to next page
+     */
     private Intent intent;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -33,7 +30,6 @@ public class fg_profile extends Fragment {
     private String mParam2;
 
     public fg_profile() {
-        // Required empty public constructor
     }
 
     /**
@@ -57,7 +53,7 @@ public class fg_profile extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        sta = getActivity().findViewById(R.id.st);
+        Button sta = getActivity().findViewById(R.id.st);
         sta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +62,7 @@ public class fg_profile extends Fragment {
             }
         });
 
-        set = getActivity().findViewById(R.id.se);
+        Button set = getActivity().findViewById(R.id.se);
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +71,7 @@ public class fg_profile extends Fragment {
             }
         });
 
-        b = getActivity().findViewById(R.id.back);
+        Button b = getActivity().findViewById(R.id.back);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,7 +89,9 @@ public class fg_profile extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    /**
+     * initialize fragment view.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -10,26 +10,29 @@ import android.widget.TextView;
 
 import java.util.List;
 import java.util.Random;
-
+/**
+ * recipe displayed in this page
+ */
 public class recipeshow extends AppCompatActivity {
-
-    private TextView name;
-    private TextView ingredients;
-    private TextView directions;
-    private TextView calories;
-    private recipedata d;
-    private Button b;
+    /**
+     * jump to next page
+     */
     private Intent intent;
 
+    /**
+     * initialize activity.
+     * using findViewById(int) to retrieve the widgets in that UI that need to interact with programmatically.
+     * using setOnClickListener() to active button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipeshow);
-        name = findViewById(R.id.name);
-        ingredients = findViewById(R.id.ingredients);
-        directions = findViewById(R.id.directions);
-        calories = findViewById(R.id.calories);
-        d = new recipedata(getApplicationContext());
+        TextView name = findViewById(R.id.name);
+        TextView ingredients = findViewById(R.id.ingredients);
+        TextView directions = findViewById(R.id.directions);
+        TextView calories = findViewById(R.id.calories);
+        recipedata d = new recipedata(getApplicationContext());
         List<recipe_items_model> recipes = d.getAllrecipes();
         Random random = new Random();
         int n = random.nextInt(recipes.size());
@@ -38,7 +41,7 @@ public class recipeshow extends AppCompatActivity {
         ingredients.setText(recipe.getfood_item());
         directions.setText(recipe.getCookingrecipe());
         calories.setText(String.valueOf(recipe.getcalorie()));
-        b = findViewById(R.id.back);
+        Button b = findViewById(R.id.back);
         intent = new Intent(recipeshow.this,MainActivity.class);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
