@@ -24,3 +24,11 @@ this is an Android app, programming by using Android Studio.
 8. Double click FlashHeal > nav > app > src > main > res > layout > activity_login.xml
 9. If you can see the UI page, continue. If cannot, check and redo from step 2.
 10. 
+
+## Reference
+
+Find Nutritional Value of a Product. (2021). Nutritional Value. https://www.nutritionvalue.org/
+
+Healthy Ways to Lose Weight. (2021). EatingWell. https://www.eatingwell.com/category/4236/weight-loss/
+
+卡路里. (2021). 百度百科. https://baike.baidu.com/item/%E5%8D%A1%E8%B7%AF%E9%87%8C/284236?fr=aladdin
